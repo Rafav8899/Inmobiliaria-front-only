@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/nivo-slider.css">
     <link rel="stylesheet" href="css/jquery-ui.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/styles-index.css">
     <link rel="stylesheet" href="css/responsive.css">
     
     <!-- Modernizr -->
@@ -38,7 +38,7 @@
                             <nav>
                                 <ul>
                                     <li class="active"><a href="index.php">Home</a></li>
-                                    <li><a href="laempresa.php">La Empresa</a></li>
+                                    <li><a href="laEmpresa.html">La Empresa</a></li>
                                     <li> 
                                         <a href="#">Propiedades
                                             <i class="fa fa-angle-down"></i>
@@ -48,8 +48,8 @@
                                             <li><a href="propiedades.php?ope=A&p=0">en Alquiler</a></li>
                                         </ul> 
                                     </li>
-                                    <li><a href="emprendimientos.php">Emprendimientos</a></li>
-                                    <li><a href="tasaciones.php">Tasaciones</a></li>
+                                    <li><a href="emprendimientos.html">Emprendimientos</a></li>
+                                    <li><a href="tasaciones.html">Tasaciones</a></li>
                                     <li><a href="https://xintel.com.ar/alquileres/index.php?codemp=SOS" target="_blank">Acceso clientes</a></li>
                                 </ul>
                             </nav>
@@ -65,180 +65,196 @@
         </div>
     </header>
         <!-- Header Area End Here -->        
-        <!-- Slider Area-->
-        <div class="slider-area">
-            <div class="bend niceties preview-2">
-                <div id="ensign-nivoslider" class="slides"> 
-                    <img src="images/slider/1.jpg" alt="" title="#slider-direction-1"  />
-                    <img src="images/slider/2.jpg" alt="" title="#slider-direction-2"  />
-                    <img src="images/slider/3.jpg" alt="" title="#slider-direction-3"  />
+        
+    <!-- Slider / Hero Section Optimizado -->
+    <div class="custom-slider">
+        <div class="slides-container">
+            <div class="slide active" style="background-image: url('img/1.jpg');">
+                <div class="slide-content">
+                    <h1>Encontrá tu propiedad <span>en Misiones</span></h1>
+                    <p>Las mejores opciones en alquiler y venta al alcance de tu mano.</p>
                 </div>
-                <!-- direction 1 -->
-                <div id="slider-direction-1" class="slider-direction">
-                    <div class="slider-content t-cn s-tb slider-2">
-                        <div class="title-container s-tb-c"></div>
-                    </div>  
+            </div>
+            <div class="slide" style="background-image: url('img/2.jpg');">
+                <div class="slide-content">
+                    <h1>Casas y Departamentos</h1>
+                    <p>Descubrí tu próximo hogar en las mejores zonas.</p>
                 </div>
-                <!-- direction 2 -->
-                <div id="slider-direction-2" class="slider-direction">
-                    <div class="slider-content t-cn s-tb slider-2">
-                        <div class="title-container s-tb-c"></div>
-                    </div>  
+            </div>
+            <div class="slide" style="background-image: url('img/3.jpg');">
+                <div class="slide-content">
+                    <h1>Invertí seguro</h1>
+                    <p>Asesoramiento profesional en tasaciones y emprendimientos.</p>
                 </div>
-                <!-- direction 3 -->
-                <div id="slider-direction-3" class="slider-direction">
-                    <div class="slider-content t-cn s-tb slider-2">
-                        <div class="title-container s-tb-c"></div>
-                    </div>  
-                </div>
-
             </div>
         </div>
-        <!-- Slider End-->
-        
-        <!-- Find Your Home Start Here -->
-        <div class="find-your-home-area">
-            <div class="container">
-                <div class="row">
-                    <div class="info-form">
-                        <h2>Busca tu nuevo hogar</h2>
-                        <form action="propiedades.php" method="GET">
-                            <div class="form-fields">                      
-                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                                    <div class="single-field">
-                                        <p></p>
-                                        <div class="input-box">
-                                            <select name="ope">
-                                                <option value="All">Operación</option><option value="A">Alquiler</option><option value="M">Venta Y Alquiler</option><option value="V">Venta</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>                      
-                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                                    <div class="single-field">
-                                        <p></p>
-                                        <div class="input-box">
-                                            <select name="tipo">
-                                                <option value="All">Tipo</option>
-                                                <option value="C">Casa</option>
-                                                <option value="D">Departamento</option>
-                                                <option value="E">Edificio</option>
-                                                <option value="G">Galpon</option>
-                                                <option value="L">Local</option>
-                                                <option value="O">Oficina</option>
-                                                <option value="Q">Quinta</option>
-                                                <option value="T">Lote</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>                      
-                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                                    <div class="single-field">
-                                        <div class="input-box">
-                                            <select name="a1">
-                                                <option value="All">Ambientes</option>
-                                                <option value="0">0 Ambientes</option>
-                                                <option value="1">1 Ambientes</option>
-                                                <option value="2">2 Ambientes</option>
-                                                <option value="3">3 Ambientes</option>
-                                                <option value="4">4 Ambientes</option>
-                                                <option value="5">5 Ambientes</option>
-                                                <option value="6">6 Ambientes</option>
-                                                <option value="7">7 Ambientes</option>
-                                                <option value="8">8 Ambientes</option>
-                                                <option value="10">10 Ambientes</option>                                            </select>
-                                        </div>
-                                    </div>
-                                </div>                      
-                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                                    <div class="single-field">
-                                        <div class="input-box">
-                                            <select name="loc" onclick="armar_abarrio();">
-                                                <option value="All">Localidad</option>
-                                                <option value="candelaria">Candelaria</option>
-                                                <option value="garupa">Garupá</option>
-                                                <option value="ita ibate">Itá Ibaté</option>
-                                                <option value="ituzaingo">Ituzaingó</option>
-                                                <option value="jardin america">Jardín América</option>
-                                                <option value="posadas">Posadas</option>
-                                                <option value="posadas- misiones">Posadas- Misiones</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>                      
-                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                                    <div class="single-field">
-                                        <p></p>
-                                        <div class="input-box">
-                                            <select name="b">
-                                                <option value="All">Barrio</option>
-                                                <option value="AERO CLUB">Aero Club</option>
-                                                <option value="BAHIA EL BRETE">Bahia El Brete</option>
-                                                <option value="BARRIO CENTENARIO">Barrio Centenario</option>
-                                                <option value="BARRIO TAJAMAR">Barrio Tajamar</option>
-                                                <option value="BARRIOS TERRAZAS">Barrios Terrazas</option>
-                                                <option value="B� YVYRA PYTA">B? Yvyra Pyta</option>
-                                                <option value="CEN TRO">Cen Tro</option>
-                                                <option value="CENTRO">Centro</option>
-                                                <option value="CH 150">Ch 150</option>
-                                                <option value="CH. 114">Ch. 114</option>
-                                                <option value="CHACRA 32-33">Chacra 32-33</option>
-                                                <option value="COSTARENA">Costarena</option>
-                                                <option value="EL LAGO">El Lago</option>
-                                                <option value="EL PALMAR">El Palmar</option>
-                                                <option value="Garupa">Garupa</option>
-                                                <option value="Itaembe Mini">Itaembe Mini</option>
-                                                <option value="LA CANDELARIA">La Candelaria</option>
-                                                <option value="La Colina">La Colina</option>
-                                                <option value="LAS TACUARITAS">Las Tacuaritas</option>
-                                                <option value="Luz y Fuerza">Luz Y Fuerza</option>
-                                                <option value="MIGUEL LANUS">Miguel Lanus</option>
-                                                <option value="PALOMAR">Palomar</option>
-                                                <option value="Prosol">Prosol</option>
-                                                <option value="PUNTA GALLINO">Punta Gallino</option>
-                                                <option value="RINCON SANTA MARIA">Rincon Santa Maria</option>
-                                                <option value="SAMSA">Samsa</option>
-                                                <option value="SANTA CECILIA">Santa Cecilia</option>
-                                                <option value="SANTA INES">Santa Ines</option>
-                                                <option value="TAJAMAR">Tajamar</option>
-                                                <option value="VILLA BLOSSET">Villa Blosset</option>
-                                                <option value="VILLA SARITA">Villa Sarita</option>
-                                                <option value="VILLA URQUIZA">Villa Urquiza</option>
-                                            </select>
-                                        </div>
+
+        <!-- Controles de navegación del carrusel -->
+        <button class="slider-btn prev" aria-label="Anterior">&#10094;</button>
+        <button class="slider-btn next" aria-label="Siguiente">&#10095;</button>
+
+        <!-- Puntos indicadores -->
+        <div class="slider-dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+        </div>
+    </div>
+
+        <!-- Filtros de búsqueda -->
+
+    <div class="find-your-home-area">
+        <div class="container">
+            <div class="row">
+                <div class="info-form">
+                    <h2>Buscá tu nuevo hogar</h2>
+                    <form action="propiedades.php" method="GET">
+                        <div class="form-fields">                       
+                            <!-- Operación -->
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="single-field">
+                                    <div class="input-box">
+                                        <select name="ope">
+                                            <option value="All">Operación</option>
+                                            <option value="A">Alquiler</option>
+                                            <option value="M">Venta Y Alquiler</option>
+                                            <option value="V">Venta</option>
+                                        </select>
                                     </div>
                                 </div>
-                                
-                                <div class="col-lg-6 col-md-3 col-sm-3 col-xs-12">
-                                    <div class="single-field">                                            
-                                        <p>Rango de precios</p>
-                                        <div id="slider-range"></div>
-                                        <div class="price-area">
-                                            <input type="text" id="amount">
-                                            <input type="hidden" name="m" value="D">
-                                            <input type="hidden" name="desde" id="desde" value="100000"/>
-                                            <input type="hidden" name="hasta" id="hasta" value="400000"/>
-                                        </div>
+                            </div>                       
+                            <!-- Tipo -->
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="single-field">
+                                    <div class="input-box">
+                                        <select name="tipo">
+                                            <option value="All">Tipo de Propiedad</option>
+                                            <option value="C">Casa</option>
+                                            <option value="D">Departamento</option>
+                                            <option value="E">Edificio</option>
+                                            <option value="G">Galpón</option>
+                                            <option value="L">Local</option>
+                                            <option value="O">Oficina</option>
+                                            <option value="Q">Quinta</option>
+                                            <option value="T">Lote</option>
+                                        </select>
                                     </div>
-                                </div>                  
-                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                                    <div class="read-more">
-                                        <button class="button btn btn-danger btn-lg" type="submit" style="background-color: #00559b!important;border-color: #00559b!important">Buscar</button>
+                                </div>
+                            </div>                       
+                            <!-- Ambientes -->
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="single-field">
+                                    <div class="input-box">
+                                        <select name="a1">
+                                            <option value="All">Ambientes</option>
+                                            <option value="0">0 Ambientes</option>
+                                            <option value="1">1 Ambiente</option>
+                                            <option value="2">2 Ambientes</option>
+                                            <option value="3">3 Ambientes</option>
+                                            <option value="4">4 Ambientes</option>
+                                            <option value="5">5 Ambientes</option>
+                                            <option value="6">6 Ambientes</option>
+                                            <option value="7">7 Ambientes</option>
+                                            <option value="8">8 Ambientes</option>
+                                            <option value="10">10 Ambientes</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>                       
+                            <!-- Localidad -->
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="single-field">
+                                    <div class="input-box">
+                                        <select name="loc" onclick="armar_abarrio();">
+                                            <option value="All">Localidad</option>
+                                            <option value="candelaria">Candelaria</option>
+                                            <option value="garupa">Garupá</option>
+                                            <option value="ita ibate">Itá Ibaté</option>
+                                            <option value="ituzaingo">Ituzaingó</option>
+                                            <option value="jardin america">Jardín América</option>
+                                            <option value="posadas">Posadas</option>
+                                            <option value="posadas- misiones">Posadas- Misiones</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>                       
+                            <!-- Barrio -->
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="single-field">
+                                    <div class="input-box">
+                                        <select name="b">
+                                            <option value="All">Barrio</option>
+                                            <option value="AERO CLUB">Aero Club</option>
+                                            <option value="BAHIA EL BRETE">Bahía El Brete</option>
+                                            <option value="BARRIO CENTENARIO">Barrio Centenario</option>
+                                            <option value="BARRIO TAJAMAR">Barrio Tajamar</option>
+                                            <option value="BARRIOS TERRAZAS">Barrios Terrazas</option>
+                                            <option value="CEN TRO">Centro</option>
+                                            <option value="CH 150">Ch 150</option>
+                                            <option value="CH. 114">Ch. 114</option>
+                                            <option value="CHACRA 32-33">Chacra 32-33</option>
+                                            <option value="COSTARENA">Costanera</option>
+                                            <option value="EL LAGO">El Lago</option>
+                                            <option value="EL PALMAR">El Palmar</option>
+                                            <option value="Garupa">Garupá</option>
+                                            <option value="Itaembe Mini">Itaembé Miní</option>
+                                            <option value="LA CANDELARIA">La Candelaria</option>
+                                            <option value="La Colina">La Colina</option>
+                                            <option value="LAS TACUARITAS">Las Tacuaritas</option>
+                                            <option value="Luz y Fuerza">Luz y Fuerza</option>
+                                            <option value="MIGUEL LANUS">Miguel Lanús</option>
+                                            <option value="PALOMAR">Palomar</option>
+                                            <option value="Prosol">Prosol</option>
+                                            <option value="PUNTA GALLINO">Punta Gallino</option>
+                                            <option value="RINCON SANTA MARIA">Rincón Santa María</option>
+                                            <option value="SAMSA">Samsa</option>
+                                            <option value="SANTA CECILIA">Santa Cecilia</option>
+                                            <option value="SANTA INES">Santa Inés</option>
+                                            <option value="TAJAMAR">Tajamar</option>
+                                            <option value="VILLA BLOSSET">Villa Blosset</option>
+                                            <option value="VILLA SARITA">Villa Sarita</option>
+                                            <option value="VILLA URQUIZA">Villa Urquiza</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
-                            <input type="hidden" name="p" value="0">
-                        </form>
-                    </div>
-                    <div class="shadow text-center">
-                        <img src="images/shadow.png" alt="shadow">
-                        <a href="#bajar"><i class="fa fa-angle-down" style="position: absolute;font-size: 50px;left: 0;width: 100%;"></i></a>
-                    </div>
+                            
+                            <!-- Rango de precios -->
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="single-field price-field-container">                                   
+                                    <p>Rango de precios</p>
+                                    <div id="slider-range"></div>
+                                    <div class="price-area">
+                                        <input type="text" id="amount" readonly>
+                                        <input type="hidden" name="m" value="D">
+                                        <input type="hidden" name="desde" id="desde" value="100000">
+                                        <input type="hidden" name="hasta" id="hasta" value="400000">
+                                    </div>
+                                </div>
+                            </div>                       
+                            <!-- Botón Buscar -->
+                            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                                <div class="read-more">
+                                    <button class="btn-buscar" type="submit">Buscar Propiedad</button>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="hidden" name="p" value="0">
+                    </form>
+                </div>
+                <!-- Decoración de sombra inferior -->
+                <div class="shadow text-center">
+                    <img src="images/shadow.png" alt="shadow">
+                    <a href="#bajar">
+                        <i class="fa fa-angle-down"></i>
+                    </a>
                 </div>
             </div>
         </div>
-        <!-- Find Your Home End Here -->
-        <!-- Feature Property Area Start Here -->
+    </div>
+    <!-- Find Your Home End Here -->
+
+    <!-- Feature Property Area Start Here -->
         <div class="feature-property-area" id="bajar">
             <div class="container">
                 <div class="row">
@@ -474,8 +490,10 @@
         </footer>
         <!-- Footer End Here --> 
 		<!-- all js here -->
+            <script src="script.js"></script>
 		<!-- jquery latest version -->
-        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/vendor/jquery-1.12.0.min.js"></script>
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+        <script src="js/vendor/jquery-1.12.0.min.js"></script>
 		<!-- bootstrap js -->
         <script src="js/bootstrap.min.js"></script>
 		<!-- owl.carousel js -->
