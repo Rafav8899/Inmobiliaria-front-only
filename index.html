@@ -1,0 +1,514 @@
+<!doctype html>
+<html class="no-js" lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedades en alquiler y venta en Misiones</title>    
+    <link rel="shortcut icon" type="image/x-icon" href="images/fav.png">
+    
+    <!-- CSS Estándar -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/nivo-slider.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Modernizr -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+    <!-- Header Area Start Here -->
+    <header>
+        <!-- Menú principal -->
+        <div class="main-header-area" id="sticky">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                        <div class="logo-area">
+                            <a href="index.php">
+                                <img src="images/logofrase.png" style="height: 165px;">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                        <div class="main-menu">
+                            <nav>
+                                <ul>
+                                    <li class="active"><a href="index.php">Home</a></li>
+                                    <li><a href="laempresa.php">La Empresa</a></li>
+                                    <li> 
+                                        <a href="#">Propiedades
+                                            <i class="fa fa-angle-down"></i>
+                                        </a>
+                                        <ul class="sub-menu">
+                                            <li><a href="propiedades.php?ope=V&p=0">en Venta</a></li>
+                                            <li><a href="propiedades.php?ope=A&p=0">en Alquiler</a></li>
+                                        </ul> 
+                                    </li>
+                                    <li><a href="emprendimientos.php">Emprendimientos</a></li>
+                                    <li><a href="tasaciones.php">Tasaciones</a></li>
+                                    <li><a href="https://xintel.com.ar/alquileres/index.php?codemp=SOS" target="_blank">Acceso clientes</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                        <div class="submit-property">
+                            <a class="button btn btn-danger btn-lg" href="contacto.php">Contacto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+        <!-- Header Area End Here -->        
+        <!-- Slider Area-->
+        <div class="slider-area">
+            <div class="bend niceties preview-2">
+                <div id="ensign-nivoslider" class="slides"> 
+                    <img src="images/slider/1.jpg" alt="" title="#slider-direction-1"  />
+                    <img src="images/slider/2.jpg" alt="" title="#slider-direction-2"  />
+                    <img src="images/slider/3.jpg" alt="" title="#slider-direction-3"  />
+                </div>
+                <!-- direction 1 -->
+                <div id="slider-direction-1" class="slider-direction">
+                    <div class="slider-content t-cn s-tb slider-2">
+                        <div class="title-container s-tb-c"></div>
+                    </div>  
+                </div>
+                <!-- direction 2 -->
+                <div id="slider-direction-2" class="slider-direction">
+                    <div class="slider-content t-cn s-tb slider-2">
+                        <div class="title-container s-tb-c"></div>
+                    </div>  
+                </div>
+                <!-- direction 3 -->
+                <div id="slider-direction-3" class="slider-direction">
+                    <div class="slider-content t-cn s-tb slider-2">
+                        <div class="title-container s-tb-c"></div>
+                    </div>  
+                </div>
+
+            </div>
+        </div>
+        <!-- Slider End-->
+        
+        <!-- Find Your Home Start Here -->
+        <div class="find-your-home-area">
+            <div class="container">
+                <div class="row">
+                    <div class="info-form">
+                        <h2>Busca tu nuevo hogar</h2>
+                        <form action="propiedades.php" method="GET">
+                            <div class="form-fields">                      
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                    <div class="single-field">
+                                        <p></p>
+                                        <div class="input-box">
+                                            <select name="ope">
+                                                <option value="All">Operación</option><option value="A">Alquiler</option><option value="M">Venta Y Alquiler</option><option value="V">Venta</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>                      
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                    <div class="single-field">
+                                        <p></p>
+                                        <div class="input-box">
+                                            <select name="tipo">
+                                                <option value="All">Tipo</option>
+                                                <option value="C">Casa</option>
+                                                <option value="D">Departamento</option>
+                                                <option value="E">Edificio</option>
+                                                <option value="G">Galpon</option>
+                                                <option value="L">Local</option>
+                                                <option value="O">Oficina</option>
+                                                <option value="Q">Quinta</option>
+                                                <option value="T">Lote</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>                      
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                    <div class="single-field">
+                                        <div class="input-box">
+                                            <select name="a1">
+                                                <option value="All">Ambientes</option>
+                                                <option value="0">0 Ambientes</option>
+                                                <option value="1">1 Ambientes</option>
+                                                <option value="2">2 Ambientes</option>
+                                                <option value="3">3 Ambientes</option>
+                                                <option value="4">4 Ambientes</option>
+                                                <option value="5">5 Ambientes</option>
+                                                <option value="6">6 Ambientes</option>
+                                                <option value="7">7 Ambientes</option>
+                                                <option value="8">8 Ambientes</option>
+                                                <option value="10">10 Ambientes</option>                                            </select>
+                                        </div>
+                                    </div>
+                                </div>                      
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                    <div class="single-field">
+                                        <div class="input-box">
+                                            <select name="loc" onclick="armar_abarrio();">
+                                                <option value="All">Localidad</option>
+                                                <option value="candelaria">Candelaria</option>
+                                                <option value="garupa">Garupá</option>
+                                                <option value="ita ibate">Itá Ibaté</option>
+                                                <option value="ituzaingo">Ituzaingó</option>
+                                                <option value="jardin america">Jardín América</option>
+                                                <option value="posadas">Posadas</option>
+                                                <option value="posadas- misiones">Posadas- Misiones</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>                      
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                    <div class="single-field">
+                                        <p></p>
+                                        <div class="input-box">
+                                            <select name="b">
+                                                <option value="All">Barrio</option>
+                                                <option value="AERO CLUB">Aero Club</option>
+                                                <option value="BAHIA EL BRETE">Bahia El Brete</option>
+                                                <option value="BARRIO CENTENARIO">Barrio Centenario</option>
+                                                <option value="BARRIO TAJAMAR">Barrio Tajamar</option>
+                                                <option value="BARRIOS TERRAZAS">Barrios Terrazas</option>
+                                                <option value="B� YVYRA PYTA">B? Yvyra Pyta</option>
+                                                <option value="CEN TRO">Cen Tro</option>
+                                                <option value="CENTRO">Centro</option>
+                                                <option value="CH 150">Ch 150</option>
+                                                <option value="CH. 114">Ch. 114</option>
+                                                <option value="CHACRA 32-33">Chacra 32-33</option>
+                                                <option value="COSTARENA">Costarena</option>
+                                                <option value="EL LAGO">El Lago</option>
+                                                <option value="EL PALMAR">El Palmar</option>
+                                                <option value="Garupa">Garupa</option>
+                                                <option value="Itaembe Mini">Itaembe Mini</option>
+                                                <option value="LA CANDELARIA">La Candelaria</option>
+                                                <option value="La Colina">La Colina</option>
+                                                <option value="LAS TACUARITAS">Las Tacuaritas</option>
+                                                <option value="Luz y Fuerza">Luz Y Fuerza</option>
+                                                <option value="MIGUEL LANUS">Miguel Lanus</option>
+                                                <option value="PALOMAR">Palomar</option>
+                                                <option value="Prosol">Prosol</option>
+                                                <option value="PUNTA GALLINO">Punta Gallino</option>
+                                                <option value="RINCON SANTA MARIA">Rincon Santa Maria</option>
+                                                <option value="SAMSA">Samsa</option>
+                                                <option value="SANTA CECILIA">Santa Cecilia</option>
+                                                <option value="SANTA INES">Santa Ines</option>
+                                                <option value="TAJAMAR">Tajamar</option>
+                                                <option value="VILLA BLOSSET">Villa Blosset</option>
+                                                <option value="VILLA SARITA">Villa Sarita</option>
+                                                <option value="VILLA URQUIZA">Villa Urquiza</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-lg-6 col-md-3 col-sm-3 col-xs-12">
+                                    <div class="single-field">                                            
+                                        <p>Rango de precios</p>
+                                        <div id="slider-range"></div>
+                                        <div class="price-area">
+                                            <input type="text" id="amount">
+                                            <input type="hidden" name="m" value="D">
+                                            <input type="hidden" name="desde" id="desde" value="100000"/>
+                                            <input type="hidden" name="hasta" id="hasta" value="400000"/>
+                                        </div>
+                                    </div>
+                                </div>                  
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                    <div class="read-more">
+                                        <button class="button btn btn-danger btn-lg" type="submit" style="background-color: #00559b!important;border-color: #00559b!important">Buscar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="hidden" name="p" value="0">
+                        </form>
+                    </div>
+                    <div class="shadow text-center">
+                        <img src="images/shadow.png" alt="shadow">
+                        <a href="#bajar"><i class="fa fa-angle-down" style="position: absolute;font-size: 50px;left: 0;width: 100%;"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Find Your Home End Here -->
+        <!-- Feature Property Area Start Here -->
+        <div class="feature-property-area" id="bajar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="section-title">
+                            <h2>Propiedades <span>Destacadas</span></h2>
+                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis laborum, veniam, eius, incidunt laudantium illo inventore deserunt explicabo consequuntur vero illum aut perspiciatis nesciunt sit, rem! Temporibus laborum, atque eveniet!</p> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="property-menu">
+                            <ul>
+                                <li><a href="propiedades.php?p=0">Todas</a></li>
+                                <li><a href="propiedades.php?p=0&tipo=C">Casas</a></li>
+                                <li><a href="propiedades.php?p=0&tipo=D">Departamento</a></li>
+                                <li><a href="propiedades.php?p=0&tipo=O">Oficina</a></li>
+                                <li><a href="propiedades.php?p=0&tipo=L">Lote</a></li>
+                                <li><a href="emprendimientos.php?">Edificios</a></li>
+                                <li><a href="loteos.php?">Loteos</a></li>
+                                <li><a href="emprendimientos.php?">Proyectos Realizados</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="grid">
+                        
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 grid-item office">
+                            <div class="single-property">
+                                <div class="images">
+                                    <img src="https://cdn-images.xintelweb.com/upload/a05a0572a101bb48b2e141840e890f38.jpg?1782924796" style="height: 300px;object-fit: cover">
+                                    <div class="icons-area">
+                                        <ul>
+                                            <li><a href="departamento-en-alquiler-en-cen-tro-ficha-sos3840" class="fancybox"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <span>Alquiler</span>
+                                </div>
+                                <div class="property-details">
+                                    <h3><a href="departamento-en-alquiler-en-cen-tro-ficha-sos3840"> Departamento en </a></h3>
+                                    <span><i class="fa fa-map-marker"></i> Posadas, CEN TRO</span>
+                                    <p>$ 340000</p>
+                                </div>
+                            </div>
+                        </div>
+                                                
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 grid-item office">
+                            <div class="single-property">
+                                <div class="images">
+                                    <img src="https://cdn-images.xintelweb.com/upload/9ad8e3dd301663270cb05afa62511088.jpg?1774969032" style="height: 300px;object-fit: cover">
+                                    <div class="icons-area">
+                                        <ul>
+                                            <li><a href="casa-en-venta-ficha-sos2820" class="fancybox"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <span>Venta</span>
+                                </div>
+                                <div class="property-details">
+                                    <h3><a href="casa-en-venta-ficha-sos2820"> Casa en </a></h3>
+                                    <span><i class="fa fa-map-marker"></i> POSADAS, </span>
+                                    <p>U$S 150000</p>
+                                </div>
+                            </div>
+                        </div>
+                                                
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 grid-item office">
+                            <div class="single-property">
+                                <div class="images">
+                                    <img src="https://cdn-images.xintelweb.com/upload/sos4101_2.jpg?168714" style="height: 300px;object-fit: cover">
+                                    <div class="icons-area">
+                                        <ul>
+                                            <li><a href="casa-en-venta-en-barrio-centenario-ficha-sos4101" class="fancybox"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <span>Venta</span>
+                                </div>
+                                <div class="property-details">
+                                    <h3><a href="casa-en-venta-en-barrio-centenario-ficha-sos4101"> Casa en </a></h3>
+                                    <span><i class="fa fa-map-marker"></i> Posadas, BARRIO CENTENARIO</span>
+                                    <p>U$S 160000</p>
+                                </div>
+                            </div>
+                        </div>
+                                                
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 grid-item office">
+                            <div class="single-property">
+                                <div class="images">
+                                    <img src="https://cdn-images.xintelweb.com/upload/0f21e44ed7ebd3cf0ee7b790468f0e31.jpeg?1770051862" style="height: 300px;object-fit: cover">
+                                    <div class="icons-area">
+                                        <ul>
+                                            <li><a href="departamento-en-alquiler-en-villa-urquiza-ficha-sos3846" class="fancybox"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <span>Alquiler</span>
+                                </div>
+                                <div class="property-details">
+                                    <h3><a href="departamento-en-alquiler-en-villa-urquiza-ficha-sos3846"> Departamento en </a></h3>
+                                    <span><i class="fa fa-map-marker"></i> POSADAS, VILLA URQUIZA</span>
+                                    <p>$ 300000</p>
+                                </div>
+                            </div>
+                        </div>
+                                                
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 grid-item office">
+                            <div class="single-property">
+                                <div class="images">
+                                    <img src="https://cdn-images.xintelweb.com/upload/5b2e9dddf95740d4d38e4b197acfae0e.jpg?1780593690" style="height: 300px;object-fit: cover">
+                                    <div class="icons-area">
+                                        <ul>
+                                            <li><a href="departamento-en-alquiler-en-villa-urquiza-ficha-sos5385" class="fancybox"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <span>Alquiler</span>
+                                </div>
+                                <div class="property-details">
+                                    <h3><a href="departamento-en-alquiler-en-villa-urquiza-ficha-sos5385"> Departamento en </a></h3>
+                                    <span><i class="fa fa-map-marker"></i> Posadas, VILLA URQUIZA</span>
+                                    <p>$ 290000</p>
+                                </div>
+                            </div>
+                        </div>
+                                                
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 grid-item office">
+                            <div class="single-property">
+                                <div class="images">
+                                    <img src="https://cdn-images.xintelweb.com/upload/sos4363_2.jpg?109651" style="height: 300px;object-fit: cover">
+                                    <div class="icons-area">
+                                        <ul>
+                                            <li><a href="casa-en-alquiler-en-villa-urquiza-ficha-sos4363" class="fancybox"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <span>Alquiler</span>
+                                </div>
+                                <div class="property-details">
+                                    <h3><a href="casa-en-alquiler-en-villa-urquiza-ficha-sos4363"> Casa en </a></h3>
+                                    <span><i class="fa fa-map-marker"></i> POSADAS, VILLA URQUIZA</span>
+                                    <p>$ 280000</p>
+                                </div>
+                            </div>
+                        </div>
+                                            </div>
+                </div>
+            </div>
+        </div>
+        <!-- Feature Property Area End Here --> <!-- Subscribe Area Start Here -->
+        <div class="subscribe-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+                        <div class="subscribe-text">
+                            <h3>SUBSCRIBE NEWSLETTER</h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+                        <div class="newsletter wow fadeInRight" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInRight;">
+                            <form>
+                                <label><i class="fa fa-envelope-o" aria-hidden="true"></i></label>
+                                <input placeholder="Ingrese su email !"/>
+                                <button>Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Subscribe Area End Here -->
+          <!-- Footer top area start -->
+        <footer>
+          <div id="footer" class="footer-top-area">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                  <div class="footer-heading">
+                    <a href="index.php"><img src="images/logofrase.png" alt=""></a>
+                    <!-- <p>Praesent vel rutrum purus. Nam vel dui eu risus duis dignissim dignissim.</p> -->
+                    <div class="footer-social-icons">
+                      <ul>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                  <div class="footer-heading">
+                    <h2>Links Utiles</h2>
+                    <div class="footer-two">
+                      <nav>
+                        <ul>
+                          <li><a href="propiedades.php?p=0"><i class="fa fa-angle-right" aria-hidden="true"></i>Propiedades</a></li>
+                          <li><a href="contacto.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Contacto</a></li>
+                          <li><a href="tasaciones.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Tasaciones</a></li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                  <div class="footer-heading heading-margin">
+                    <h2>Propiedades recientes</h2>
+                    <div class="sweet-home">
+  
+                    </div>                                  
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                  <div class="footer-heading">
+                    <h2>Contacto</h2>
+                    <p class="footer-border-bottom"><i class="fa fa-home" aria-hidden="true"></i> Estado de Israel 2809<br> Posadas, Misiones, Argentina </p>
+                    <p><i class="fa fa-phone" aria-hidden="true"></i> (0376) 44 22 483<br> (0376) 44 30 241</p>
+                    <p><i class="fa fa-envelope" aria-hidden="true"></i> <a href="/cdn-cgi/l/email-protection#b9d0d7dfd6f9cad6cad8d0d7d4d6dbd0d5d0d8cbd0d897dad6d4"> <span class="__cf_email__" data-cfemail="365f58505976455945575f585b59545f5a5f57445f571855595b">[email&#160;protected]</span></a></p>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom-area">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <div class="footer-bottom-left">                  
+                    <p>Provisto por <a href="http://xintel.com.ar" rel="nofollow" target="_blank">Xintel</a>. Perteneciente a <a href="http://amaira.com.ar" rel="nofollow" target="_blank">Amaira</a>.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!-- Footer End Here --> 
+		<!-- all js here -->
+		<!-- jquery latest version -->
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/vendor/jquery-1.12.0.min.js"></script>
+		<!-- bootstrap js -->
+        <script src="js/bootstrap.min.js"></script>
+		<!-- owl.carousel js -->
+        <script src="js/owl.carousel.min.js"></script>
+		<!-- meanmenu js -->
+        <script src="js/jquery.meanmenu.js"></script>
+		<!-- jquery-ui js -->
+        <script src="js/jquery-ui.min.js"></script>
+		<!-- wow js -->
+        <script src="js/wow.min.js"></script>
+		<!-- plugins js -->
+        <script src="js/plugins.js"></script>
+        <!-- Nivo slider js-->    
+        <script src="js/jquery.nivo.slider.js" type="text/javascript"></script>
+        <script src="js/home.js" type="text/javascript"></script>      
+        <!-- jquery.fancybox.pack js -->
+        <script src="js/jquery.fancybox.pack.js"></script>        
+        <!-- bxslider JS -->
+        <script src="js/jquery.bxslider.min.js"></script>   
+       <!--  Nice Select js -->
+        <script src="js/jquery.nice-select.min.js" type="text/javascript"></script> 
+        <!-- slick JS -->
+        <script src="js/slick.min.js"></script>
+       <!--  jquery isotope -->
+        <script src="js/isotope.pkgd.min.js" type="text/javascript"></script>
+        <script src="js/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+        <!-- jquery.counterup js -->
+        <script src="js/jquery.counterup.min.js"></script>
+        <script src="js/waypoints.min.js"></script>
+		<!-- main js -->
+        <script src="js/main.js?123ffsdsdssd"></script>
+    <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"5d7f53971cb947389f82f0b6e1d352ef","r":1}' crossorigin="anonymous"></script>
+</body>
+
+<!-- Mirrored from radontheme.com/realestate/html/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Apr 2018 03:49:52 GMT -->
+</html>
