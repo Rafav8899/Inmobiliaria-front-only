@@ -497,3 +497,109 @@ body{
   transform: translateY(3px);
   color: var(--hover-color);
 }
+
+.property-img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Contenedor de la sección para centrar y dar espacio */
+.project-section {
+    padding: 2rem 1rem;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Tarjeta principal con diseño moderno */
+.card-container {
+    background-color: var(--bg-color);
+    color: var(--text, #f2f2f2);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 380px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Efecto hover elegante para la tarjeta */
+.card-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    border-color: var(--hover-color);
+}
+
+/* Cabecera de la tarjeta */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* Etiqueta estilo pill / badge */
+.badge {
+    background-color: var(--primary, #464646);
+    color: var(--text, #f2f2f2);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Textos */
+.card-body h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.card-body p {
+    color: var(--muted, #9e9e9e);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+/* Botones de acción */
+.card-footer {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.btn-primary, .btn-secondary {
+    flex: 1;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--text, #f2f2f2);
+    color: var(--bg, #141414);
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-color, #f2f2f2);
+    border: 1px solid var(--muted, #9e9e9e);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: var(--text, #f2f2f2);
+}
