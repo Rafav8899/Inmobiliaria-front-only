@@ -516,48 +516,137 @@ body{
 /* Tarjeta principal con diseño moderno */
 .card-container {
     background-color: var(--bg-color);
-    color: var(--text, #f2f2f2);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 12px;
-    padding: 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: var(--border-radius);
+    color: var(--text-color);
+    overflow: hidden;
+    /* padding: 1.5rem; */
+    display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: 380px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    height: 100%;
+    box-shadow: var(--shadow-header);
+    transition: var(--transition);
 }
 
 /* Efecto hover elegante para la tarjeta */
 .card-container:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    box-shadow: var(--shadow-dropdown);
     border-color: var(--hover-color);
 }
 
 /* Cabecera de la tarjeta */
 .card-header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    /* width: 100%; */
+    /* margin-bottom: 1rem; */
 }
 
-/* Etiqueta estilo pill / badge */
-.badge {
-    background-color: var(--primary, #464646);
-    color: var(--text, #f2f2f2);
-    font-size: 0.75rem;
-    font-weight: 600;
-    padding: 0.25rem 0.75rem;
-    border-radius: 50px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
+.card-header .images {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--bg-header);
+}
+
+.card-header .images img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.card-container:hover .card-header .images img {
+    transform: scale(1.05);
+}
+
+/* Área de iconos */
+.card-header .icons-area {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    z-index: 2;
+}
+
+.card-header .icons-area ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.card-header .icons-area ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background-color: var(--bg-dropdown);
+    color: var(--text-color);
+    border-radius: 50%;
+    box-shadow: var(--shadow-dropdown);
+    transition: var(--transition);
+}
+
+.card-header .icons-area ul li a:hover {
+    background-color: var(--hover-color);
+    color: #ffffff;
+}
+
+/* Cuerpo de la Tarjeta */
+.card-body {
+    padding: var(--spacing-base);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-grow: 1;
+    background-color: var(--bg-color);
 }
 
 /* Textos */
 .card-body h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    margin: 0;
     font-weight: 700;
+}
+
+.card-body h3 a {
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.card-body h3 a:hover {
+    color: var(--hover-color);
+}
+
+/* Precio destacado con el color principal de hover (o acento si prefieres) */
+.card-price {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--hover-color);
+    margin: 0;
+}
+
+/* Ubicación y subtítulos */
+.card-location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--sub-text-color);
+    font-size: 0.95rem;
+}
+
+.card-location i {
+    color: var(--hover-color);
 }
 
 .card-body p {
