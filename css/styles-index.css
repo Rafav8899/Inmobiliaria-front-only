@@ -510,6 +510,7 @@ body{
     padding: 2rem 1rem;
     /* background-color: red; */
     display: flex;
+    /* flex-direction: row;  */
     justify-content: center;
     align-items: center;
 }
@@ -532,11 +533,11 @@ body{
 }
 
 /* Efecto hover elegante para la tarjeta */
-.card-container:hover {
+/* .card-container:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-dropdown);
     border-color: var(--hover-color);
-}
+} */
 
 /* Cabecera de la tarjeta */
 .card-header {
@@ -547,7 +548,7 @@ body{
 }
 
 .card-header .images {
-    /* position: relative; */
+    position: relative;
     /* width: 100%; */
     overflow: hidden;
     padding: 1rem;
@@ -561,13 +562,82 @@ body{
     object-fit: cover;
     transition: var(--transition);
     border-radius: var(--border-radius);
+    display: block;
+}
+
+.card-header .images .img-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.137);
+  transition: background-color 0.3s ease;
+  z-index: 1;
 }
 
 .card-container:hover .card-header .images img {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 /* Área de iconos */
+
+.card-container:hover .card-header .images .img-overlay {
+    background-color: rgba(0, 0, 0, 0.35); /* Oscurece un 35% la imagen */
+}
+
+/* Etiqueta de Operación (Venta / Alquiler) */
+.card-header .images span:not(.icons-area span) {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: var(--hover-color);
+    color: var(--bg-color);
+    padding: 6px 14px;
+    font-size: 0.80rem;
+    font-weight: 700;
+    border-radius: 4px;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+/* Ícono circular central con el "+" */
+.card-header .icons-area {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8); /* Centrado perfecto y ligeramente oculto inicialmente */
+    width: 45px;
+    height: 45px;
+    background-color: var(--bg-dropdown, #ffffff);
+    color: var(--text-color, #080808);
+    border-radius: 50%; /* Forma circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Invisible hasta hacer hover */
+    transition: all 0.3s ease;
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-header .icons-area .plus-icon {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1;
+    margin-top: -2px; /* Pequeño ajuste óptico para centrar el símbolo + */
+}
+
+/* Animación de aparición del botón circular al hacer hover en la tarjeta */
+.card-container:hover .card-header .icons-area {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.card-header .icons-area:hover {
+    background-color: var(--hover-color);
+    color: #ffffff;
+}
+
 .card-header .icons-area {
     position: absolute;
     bottom: 15px;
@@ -604,7 +674,7 @@ body{
     padding: var(--spacing-base);
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
     flex-grow: 1;
     /* background-color: var(--bg-color); */
 }
@@ -630,10 +700,10 @@ body{
 /* Precio destacado con el color principal de hover (o acento si prefieres) */
 .card-price {
     font-family: var(--font-heading);
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: var(--hover-color);
-    margin: 0;
+    margin:5px 0 0 0;
 }
 
 /* Ubicación y subtítulos */
@@ -642,7 +712,7 @@ body{
     align-items: center;
     gap: 8px;
     color: var(--sub-text-color);
-    font-size: 0.95rem;
+    font-size: 1rem;
 }
 
 .card-location i {
