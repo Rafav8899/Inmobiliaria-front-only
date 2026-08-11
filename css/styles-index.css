@@ -510,9 +510,17 @@ body{
     padding: 2rem 1rem;
     /* background-color: red; */
     display: flex;
+    flex-wrap: wrap;
     /* flex-direction: row;  */
     justify-content: center;
     align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin:0 auto;
+}
+.project-section .card-container{
+  flex: 0 1 calc(33.333% - 2rem);
+  box-sizing: border-box;
 }
 
 /* Tarjeta principal con diseño moderno */

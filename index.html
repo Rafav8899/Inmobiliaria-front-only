@@ -283,30 +283,28 @@
                 </div>
                 <section class="project-section">
 
-                    <div class="row">
-                    <div class="grid">
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 grid-item office">
-                            <div class="single-property">
-                                <div class="images">
-                                    <img src="https://cdn-images.xintelweb.com/upload/a05a0572a101bb48b2e141840e890f38.jpg?1782924796" style="height: 300px;object-fit: cover">
+                    <div class="card-container">
+                        <div class="card-header">
+                            <div class="images">
+                                <a href="departamento-en-alquiler-en-cen-tro-ficha-sos3840"> <!-- Consulta SQL para que cargue el show de cada propiedad -->
+                                    <div class="img-overlay"></div>
+                                    <img src="https://cdn-images.xintelweb.com/upload/a05a0572a101bb48b2e141840e890f38.jpg?1782924796" alt=""> <!-- consulta SQL para cargar la imagen de cada propiedad -->
                                     <div class="icons-area">
-                                        <ul>
-                                            <li>
-                                                <a href="departamento-en-alquiler-en-cen-tro-ficha-sos3840" class="fancybox">
-                                                    <i class="fa fa-plus" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
+                                        <span class="plus-icon">+</span>
                                     </div>
-                                    <span>Alquiler</span>
-                                </div>
-                                <div class="property-details">
-                                    <h3><a href="departamento-en-alquiler-en-cen-tro-ficha-sos3840"> Departamento en </a></h3>
-                                    <span><i class="fa fa-map-marker"></i> Posadas, CEN TRO</span>
-                                    <p>$ 340000</p>
-                                </div>
+                                </a>
+                                <span>Alquiler</span> <!-- Consulta SQL para mostrar el tipo de operación -->
                             </div>
                         </div>
+                        <div class="card-body">
+                            <h3>
+                                <!-- Yo quitaria esta parte. Ya tenemos un enlace al show, no hace falta poner 2 -->
+                                <a href="departamento-en-alquiler-en-cen-tro-ficha-sos3840">Departamento en Alquiler</a><!-- Consulta SQL para mostrar el nombre cada propiedad -->
+                            </h3>
+                            <div class="card-location">Posadas, CENTRO</div> <!-- Consulta SQL para mostrar la ubicación de cada propiedad -->
+                        <p class="card-price">$ 340000</p> <!-- Consulta SQL para mostrar el precio de cada propiedad -->
+                        </div>
+                    </div> 
                                                 
                         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 grid-item office">
                             <div class="single-property">
@@ -448,9 +446,7 @@
                                 </div>
                             </div>
                         </div>
-                        </section>
-                    </div>
-                </div>
+                        </section>            
             <!-- </div> -->
         <!-- </div> -->
         <!-- Feature Property Area End Here --> 
