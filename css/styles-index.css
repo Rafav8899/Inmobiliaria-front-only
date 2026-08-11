@@ -52,59 +52,50 @@
 body{
     background-color: var(--bg-color);
 }
+
 /* Contenedor general del Header */
-.main-header-area {
-    background-color: var(--bg-color);
-    padding: 12px 0;
-    box-shadow: var(--shadow-header);
-    transition: all var(--transition-speed) var(--transition-ease);
-    z-index: 1000;
+.main-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: var(--bg-color);
+  box-shadow: var(--shadow-header);
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.main-header-area#sticky{
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-/* LOGO */
-.logo-area {
-    display: flex;
-    align-items: center;
-}
-
-.logo-area img {
-  max-height: 75px; /* Un tamaño más equilibrado para navegadores modernos */
+.logo img{
+  height: 100px;
   width: auto;
-  object-fit: contain;
+  display: block;
   transition: transform var(--transition-speed) var(--transition-ease);
 }
 
-.logo-area img:hover {
+.logo img:hover {
   transform: scale(1.02);
 }
 
 /* Menú Principal */
-.main-menu nav > ul {
+.nav-menu ul {
   display: flex;
   align-items: center;
-  justify-content: center;
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 25px;
+  gap: 2rem;
 }
 
-.main-menu nav > ul > li {
+.nav-menu ul > li {
   position: relative;
 }
 
-.main-menu nav > ul > li > a {
-  font-family: var(--font-base);
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--text-color);
+.nav-menu a {
   text-decoration: none;
+  color: var(--text-color);
+  font-weight: 600;
+  font-family: var(--font-base);
+  font-size: 0.95rem;
   padding: 10px 0;
   display: inline-flex;
   align-items: center;
@@ -113,8 +104,14 @@ body{
   position: relative;
 }
 
+.nav-menu a:hover,
+.nav-menu a:active{
+  color: var(--hover-color);
+}
+
+
 /* Indicador animado debajo de cada enlace */
-.main-menu nav > ul > li > a::after {
+.nav-menu ul > li > a::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -126,57 +123,66 @@ body{
 }
 
 /* Hover y Estado Activo */
-.main-menu nav > ul > li:hover > a,
-.main-menu nav > ul > li.active > a {
+.nav-menu  ul > li:hover > a,
+.nav-menu  ul > li.active > a {
   color: var(--hover-color);
 }
 
-.main-menu nav > ul > li:hover > a::after,
-.main-menu nav > ul > li.active > a::after {
+.nav-menu  ul > li:hover > a::after,
+.nav-menu  ul > li.active > a::after {
   width: 100%;
 }
 
 /* Ícono del desplegable */
-.main-menu nav > ul > li > a i {
+.nav-menu ul > li > a i {
   font-size: 12px;
   transition: transform var(--transition-speed) var(--transition-ease);
 }
 
-.main-menu nav > ul > li:hover > a i {
+.nav-menu nav > ul > li:hover > a i {
   transform: rotate(180deg);
 }
 
 /* ==========================================
    3. SUBMENÚ DESPLEGABLE
    ========================================== */
-.main-menu .sub-menu {
+.nav-menu .sub-menu {
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 190px;
+  min-width: 120px;
   background-color: var(--bg-dropdown);
   box-shadow: var(--shadow-dropdown);
   border-radius: var(--border-radius);
   padding: 8px 0;
   list-style: none;
-  margin: 10px 0 0 0;
+  margin: 0;
   
   /* Animación de apertura suave */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+
   opacity: 0;
   visibility: hidden;
-  transform: translateY(12px);
+  transform: translateY(10px);
   transition: all var(--transition-speed) var(--transition-ease);
   z-index: 1050;
 }
 
 /* Revelar el submenú al pasar el cursor */
-.main-menu nav > ul > li:hover .sub-menu {
+.nav-menu ul > li:hover .sub-menu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
+.nav-menu .sub-menu li{
+  position: static;
+  width: 100%;
+}
 
-.main-menu .sub-menu li a {
+.nav-menu .sub-menu li a {
   display: block;
   padding: 10px 18px;
   font-family: var(--font-heading);
@@ -187,22 +193,22 @@ body{
   transition: background-color var(--transition-speed), color var(--transition-speed);
 }
 
-.main-menu .sub-menu li a:hover {
+.nav-menu .sub-menu li a::after {
+  display: none; 
+}
+
+.nav-menu .sub-menu li a:hover {
   background-color: rgba(0, 85, 155, 0.08);
   color: var(--hover-color);
 }
 
+
 /* ==========================================
    4. BOTÓN DESTACADO (CONTACTO)
    ========================================== */
-.submit-property {
-  display: flex;
-  justify-content: flex-end;
-}
 
-.submit-property .button {
-  background-color: var(--accent-color);
-  color: #ffffff !important;
+.btn-contacto{
+  color: var(--hover-color);
   padding: 10px 24px;
   border-radius: var(--border-radius);
   font-family: var(--font-family);
@@ -211,14 +217,14 @@ body{
   text-decoration: none;
   text-align: center;
   border: none;
-  box-shadow: 0 4px 10px rgba(220, 53, 69, 0.2);
   transition: all var(--transition-speed) var(--transition-ease);
 }
 
-.submit-property .button:hover {
-  background-color: var(--accent-hover);
+.btn-contacto:hover {
+  background-color:var(--hover-color);
+  color: var(--bg-color);
   transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(220, 53, 69, 0.35);
+  /* box-shadow: 0 6px 15px rgba(220, 53, 69, 0.35); */
 }
 
 /* 
@@ -503,6 +509,51 @@ body{
     height: 300px;
     width: 100%;
     object-fit: cover;
+}
+
+/* ==========================================
+  SECCIÓN DE PROPIEDADES EN TARJETAS
+   ========================================== */
+
+.propiedad-row{
+  /* background-color: green; */
+  display: flex;
+  flex-direction: column;
+  gap:1.5rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  max-width: 1200px;
+}
+.section-title h2{
+  justify-self: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.property-menu{
+  color:var(--text-color);
+  /* background-color: red; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem
+}
+
+.property-menu a{
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-color);
+  border:solid 1px var(--text-dark);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+.property-menu a:hover{
+  background-color: var(--hover-color);
+  color: var(--bg-color);
 }
 
 /* Contenedor de la sección para centrar y dar espacio */

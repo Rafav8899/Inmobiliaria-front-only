@@ -20,51 +20,31 @@
 </head>
 
 <body>
-    <!-- Header Area Start Here -->
-    <header>
-        <!-- Menú principal -->
-        <div class="main-header-area" id="sticky">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
-                        <div class="logo-area">
-                            <a href="index.php">
-                                <img src="images/logofrase.png" style="height: 165px;">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                        <div class="main-menu">
-                            <nav>
-                                <ul>
-                                    <li class="active"><a href="index.php">Home</a></li>
-                                    <li><a href="laEmpresa.html">La Empresa</a></li>
-                                    <li> 
-                                        <a href="#">Propiedades
-                                            <i class="fa fa-angle-down"></i>
-                                        </a>
-                                        <ul class="sub-menu">
-                                            <li><a href="propiedades.php?ope=V&p=0">en Venta</a></li>
-                                            <li><a href="propiedades.php?ope=A&p=0">en Alquiler</a></li>
-                                        </ul> 
-                                    </li>
-                                    <li><a href="emprendimientos.html">Emprendimientos</a></li>
-                                    <li><a href="tasaciones.html">Tasaciones</a></li>
-                                    <li><a href="https://xintel.com.ar/alquileres/index.php?codemp=SOS" target="_blank">Acceso clientes</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
-                        <div class="submit-property">
-                            <a class="button btn btn-danger btn-lg" href="contacto.php">Contacto</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+<!-- Header Area Start Here -->
+    <header class="main-header">
+        <a href="index.html" class="logo">
+            <img src="img/logo_empresa.png" alt="Logo Empresa">
+        </a>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="laEmpresa.html">La Empresa</a></li>
+                <li class="has-sub-menu">
+                    <a href="#">Propiedades</a>
+                    <ul class="sub-menu">
+                        <li><a href="#propiedades">En venta</a></li>
+                        <li><a href="#propiedades">En Alquiler</a></li>
+                    </ul>
+                </li>
+                <li><a href="emprendimientos.html">Emprendimientos</a></li>
+                <li><a href="tasaciones.html">Tasaciones</a></li>
+                <li><a href="https://xintel.com.ar/alquileres/index.php?codemp=SOS" target="_blank">Acceso clientes</a></li>
+            </ul>
+        </nav>
+        <a href="contacto.php" class="btn-contacto">Contacto</a>
     </header>
-        <!-- Header Area End Here -->        
+<!-- Header Area End Here -->        
         
     <!-- Slider / Hero Section Optimizado -->
     <div class="custom-slider">
@@ -255,161 +235,154 @@
     <!-- Find Your Home End Here -->
 
     <!-- Feature Property Area Start Here -->
-        <div class="feature-property-area" id="bajar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="section-title">
-                            <h2>Propiedades <span>Destacadas</span></h2>
-                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis laborum, veniam, eius, incidunt laudantium illo inventore deserunt explicabo consequuntur vero illum aut perspiciatis nesciunt sit, rem! Temporibus laborum, atque eveniet!</p> -->
+    <main class="main-propiedades">
+        <div class="container">
+            <div class="propiedad-row">
+                <div class="section-title">
+                    <h2>Propiedades Destacadas</h2>
+                </div>
+                <div class="property-menu">
+                    <a href="propiedades.php?p=0">Todas</a>
+                    <a href="propiedades.php?p=0&tipo=C">Casas</a>
+                    <a href="propiedades.php?p=0&tipo=D">Departamento</a>
+                    <a href="propiedades.php?p=0&tipo=O">Oficina</a>
+                    <a href="propiedades.php?p=0&tipo=L">Lote</a>
+                    <a href="emprendimientos.php?">Edificios</a>
+                    <a href="loteos.php?">Loteos</a>
+                    <a href="emprendimientos.php?">Proyectos Realizados</a>
+                </div>
+            </div>
+
+            <section class="project-section">
+
+                <div class="card-container">
+                    <div class="card-header">
+                        <div class="images">
+                            <a href="departamento-en-alquiler-en-cen-tro-ficha-sos3840"> <!-- Consulta SQL para que cargue el show de cada propiedad -->
+                                <div class="img-overlay"></div>
+                                <img src="https://cdn-images.xintelweb.com/upload/a05a0572a101bb48b2e141840e890f38.jpg?1782924796" alt=""> <!-- consulta SQL para cargar la imagen de cada propiedad -->
+                                <div class="icons-area">
+                                    <span class="plus-icon">+</span>
+                                </div>
+                            </a>
+                            <span>Alquiler</span> <!-- Consulta SQL para mostrar el tipo de operación -->
                         </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Departamento en Alquiler</h3>
+                        <div class="card-location">Posadas, CENTRO</div> <!-- Consulta SQL para mostrar la ubicación de cada propiedad -->
+                    <p class="card-price">$ 340000</p> <!-- Consulta SQL para mostrar el precio de cada propiedad -->
+                    </div>
+                </div> 
+                                            
+                <div class="card-container">
+                    <div class="card-header">
+                        <div class="images">
+                            <a href="casa-en-venta-ficha-sos2820">
+                                <div class="img-overlay"></div>
+                                <img src="https://cdn-images.xintelweb.com/upload/9ad8e3dd301663270cb05afa62511088.jpg?1774969032" alt="">
+                                <div class="icons-area">
+                                    <span class="plus-icon">+</span>
+                                </div>
+                            </a>
+                            <span>Venta</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Casa en venta</h3>
+                        <div class="card-location">POSADAS</div>
+                        <p class="card-price">U$S 150000</p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="property-menu">
-                            <ul>
-                                <li><a href="propiedades.php?p=0">Todas</a></li>
-                                <li><a href="propiedades.php?p=0&tipo=C">Casas</a></li>
-                                <li><a href="propiedades.php?p=0&tipo=D">Departamento</a></li>
-                                <li><a href="propiedades.php?p=0&tipo=O">Oficina</a></li>
-                                <li><a href="propiedades.php?p=0&tipo=L">Lote</a></li>
-                                <li><a href="emprendimientos.php?">Edificios</a></li>
-                                <li><a href="loteos.php?">Loteos</a></li>
-                                <li><a href="emprendimientos.php?">Proyectos Realizados</a></li>
-                            </ul>
+
+                <div class="card-container">
+                    <div class="card-header">
+                        <div class="images">
+                            <a href="casa-en-venta-en-barrio-centenario-ficha-sos4101">
+                                <div class="img-overlay"></div>
+                                <img src="https://cdn-images.xintelweb.com/upload/sos4101_2.jpg?168714" alt="">
+                                <div class="icons-area">
+                                    <span class="plus-icon">+</span>
+                                </div>
+                            </a>
+                            <span>Venta</span>
                         </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Casa en venta</h3>
+                        <div class="card-location">POSADAS</div>
+                        <p class="card-price">U$S 160000</p>
                     </div>
                 </div>
-                <section class="project-section">
 
-                    <div class="card-container">
-                        <div class="card-header">
-                            <div class="images">
-                                <a href="departamento-en-alquiler-en-cen-tro-ficha-sos3840"> <!-- Consulta SQL para que cargue el show de cada propiedad -->
-                                    <div class="img-overlay"></div>
-                                    <img src="https://cdn-images.xintelweb.com/upload/a05a0572a101bb48b2e141840e890f38.jpg?1782924796" alt=""> <!-- consulta SQL para cargar la imagen de cada propiedad -->
-                                    <div class="icons-area">
-                                        <span class="plus-icon">+</span>
-                                    </div>
-                                </a>
-                                <span>Alquiler</span> <!-- Consulta SQL para mostrar el tipo de operación -->
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h3>Departamento en Alquiler</h3>
-                            <div class="card-location">Posadas, CENTRO</div> <!-- Consulta SQL para mostrar la ubicación de cada propiedad -->
-                        <p class="card-price">$ 340000</p> <!-- Consulta SQL para mostrar el precio de cada propiedad -->
-                        </div>
-                    </div> 
-                                                
-                    <div class="card-container">
-                        <div class="card-header">
-                            <div class="images">
-                                <a href="casa-en-venta-ficha-sos2820">
-                                    <div class="img-overlay"></div>
-                                    <img src="https://cdn-images.xintelweb.com/upload/9ad8e3dd301663270cb05afa62511088.jpg?1774969032" alt="">
-                                    <div class="icons-area">
-                                        <span class="plus-icon">+</span>
-                                    </div>
-                                </a>
-                                <span>Venta</span>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h3>Casa en venta</h3>
-                            <div class="card-location">POSADAS</div>
-                            <p class="card-price">U$S 150000</p>
+                <div class="card-container">
+                    <div class="card-header">
+                        <div class="images">
+                            <a href="casa-en-venta-en-barrio-centenario-ficha-sos4101">
+                                <div class="img-overlay"></div>
+                                <img src="https://cdn-images.xintelweb.com/upload/0f21e44ed7ebd3cf0ee7b790468f0e31.jpeg?1770051862">
+                                <div class="icons-area">
+                                    <span class="plus icon">+</span>
+                                </div>
+                            </a>
+                            <span>Dto en Alquiler</span>
                         </div>
                     </div>
+                    <div class="card-body">
+                        <h3>Dto en Alquiler</h3>
+                        <div class="card-location"> POSADAS, VILLA URQUIZA</div> 
+                        <p class="card-price">$ 300000</p>
+                    </div>
+                </div>
 
-                    <div class="card-container">
-                        <div class="card-header">
-                            <div class="images">
-                                <a href="casa-en-venta-en-barrio-centenario-ficha-sos4101">
-                                    <div class="img-overlay"></div>
-                                    <img src="https://cdn-images.xintelweb.com/upload/sos4101_2.jpg?168714" alt="">
-                                    <div class="icons-area">
-                                        <span class="plus-icon">+</span>
-                                    </div>
-                                </a>
-                                <span>Venta</span>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h3>Casa en venta</h3>
-                            <div class="card-location">POSADAS</div>
-                            <p class="card-price">U$S 160000</p>
+                <div class="card-container">
+                    <div class="card-header">
+                        <div class="images">
+                            <a href="departamento-en-alquiler-en-villa-urquiza-ficha-sos5385">
+                                <div class="img-overlay"></div>
+                                <img src="https://cdn-images.xintelweb.com/upload/sos4363_2.jpg?109651" alt="">
+                                <div class="icons-area">
+                                    <span class="plus-icon">+</span>
+                                </div>
+                            </a>
+                            <span>Alquiler</span>
                         </div>
                     </div>
+                    <div class="card-body">
+                        <h3>Departamento en Alquiler</h3>
+                        <div class="card-location">Posadas, VILLA URQUIZA</div>
+                        <p class="card-price">$ 290000</p>
+                    </div>
+                </div>
 
-                    <div class="card-container">
-                        <div class="card-header">
-                            <div class="images">
-                                <a href="casa-en-venta-en-barrio-centenario-ficha-sos4101">
-                                    <div class="img-overlay"></div>
-                                    <img src="https://cdn-images.xintelweb.com/upload/0f21e44ed7ebd3cf0ee7b790468f0e31.jpeg?1770051862">
-                                    <div class="icons-area">
-                                        <span class="plus icon">+</span>
-                                    </div>
-                                </a>
-                                <span>Dto en Alquiler</span>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h3>Dto en Alquiler</h3>
-                            <div class="card-location"> POSADAS, VILLA URQUIZA</div> 
-                            <p class="card-price">$ 300000</p>
+                <div class="card-container">
+                    <div class="card-header">
+                        <div class="images">
+                            <a href="departamento-en-alquiler-en-villa-urquiza-ficha-sos5385">
+                                <div class="img-overlay"></div>
+                                <img src="https://cdn-images.xintelweb.com/upload/sos5133_2.jpg?106668" alt="">
+                                <div class="icons-area">
+                                    <span class="plus-icon">+</span>
+                                </div>
+                            </a>
+                            <span>Venta</span>
                         </div>
                     </div>
-
-                    <div class="card-container">
-                        <div class="card-header">
-                            <div class="images">
-                                <a href="departamento-en-alquiler-en-villa-urquiza-ficha-sos5385">
-                                    <div class="img-overlay"></div>
-                                    <img src="https://cdn-images.xintelweb.com/upload/sos4363_2.jpg?109651" alt="">
-                                    <div class="icons-area">
-                                        <span class="plus-icon">+</span>
-                                    </div>
-                                </a>
-                                <span>Alquiler</span>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h3>Departamento en Alquiler</h3>
-                            <div class="card-location">Posadas, VILLA URQUIZA</div>
-                            <p class="card-price">$ 290000</p>
-                        </div>
+                    <div class="card-body">
+                        <h3>Departamento en Venta</h3>
+                        <div class="card-location">Posadas, VILLA BLOSSET</div>
+                        <p class="card-price">U$S 94000</p>
                     </div>
+                </div>
 
-                    <div class="card-container">
-                        <div class="card-header">
-                            <div class="images">
-                                <a href="departamento-en-alquiler-en-villa-urquiza-ficha-sos5385">
-                                    <div class="img-overlay"></div>
-                                    <img src="https://cdn-images.xintelweb.com/upload/sos5133_2.jpg?106668" alt="">
-                                    <div class="icons-area">
-                                        <span class="plus-icon">+</span>
-                                    </div>
-                                </a>
-                                <span>Venta</span>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h3>Departamento en Venta</h3>
-                            <div class="card-location">Posadas, VILLA BLOSSET</div>
-                            <p class="card-price">U$S 94000</p>
-                        </div>
-                    </div>
-                </section>
+            </section>
 
-                    </div>                        
-                                    
+        </div>
+    </main>
 
-        <!-- Feature Property Area End Here --> 
+<!-- Feature Property Area End Here --> 
 
-        <!-- Subscribe Area Start Here -->
+<!-- Subscribe Area Start Here -->
         <div class="subscribe-area">
             <div class="container">
                 <div class="row">
@@ -430,14 +403,14 @@
                 </div>
             </div>
         </div>
-        <!-- Subscribe Area End Here -->
-          <!-- Footer top area start -->
+<!-- Subscribe Area End Here -->
+<!-- Footer top area start -->
         <footer>
-          <div id="footer" class="footer-top-area">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                  <div class="footer-heading">
+            <div id="footer" class="footer-top-area">
+                <div class="container">
+                    <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="footer-heading">
                     <a href="index.php"><img src="images/logofrase.png" alt=""></a>
                     <!-- <p>Praesent vel rutrum purus. Nam vel dui eu risus duis dignissim dignissim.</p> -->
                     <div class="footer-social-icons">
