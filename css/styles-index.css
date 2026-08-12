@@ -903,3 +903,295 @@ body{
     background-color: rgba(255, 255, 255, 0.05);
     border-color: var(--text, #f2f2f2);
 }
+
+/* ==========================================
+  SECCIÓN DE SUSCRIPCIÓN
+   ========================================== */
+/* Contenedor principal de la sección */
+.subscribe-area {
+    background-color: var(--bg-secondary, #1a1a1a); /* Un tono distinguido antes del footer */
+    color: var(--text-light, #f2f2f2);
+    padding: 3rem 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.subscribe-area .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estructura interna con Flexbox */
+.subscribe-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/* Título y subtítulo */
+.subscribe-text h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.subscribe-text p {
+    margin: 0;
+    color: var(--muted, #9e9e9e);
+    font-size: 0.95rem;
+}
+
+/* Formulario */
+.newsletter-form {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Contenedor del input con su ícono */
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper i {
+    position: absolute;
+    left: 15px;
+    color: var(--muted, #9e9e9e);
+    font-size: 1rem;
+}
+
+.input-wrapper input {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    padding: 0.75rem 1rem 0.75rem 2.75rem; /* Espacio a la izquierda para el ícono */
+    color: var(--text-light, #f2f2f2);
+    font-size: 0.95rem;
+    outline: none;
+    width: 280px;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.input-wrapper input::placeholder {
+    color: var(--muted, #9e9e9e);
+}
+
+.input-wrapper input:focus {
+    border-color: var(--text-light, #f2f2f2);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Botón de suscripción */
+.btn-subscribe {
+    background-color: var(--accent-color, #dc3545); /* O tu color primario corporativo */
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.btn-subscribe:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================================
+   ESTILOS DEL FOOTER - INMOBILIARIA
+   ================================================---------- */
+
+footer {
+    background-color: #1a252f; /* Fondo oscuro institucional */
+    color: #ecf0f1;
+    font-family: var(--font-base, sans-serif);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Área superior del footer */
+.footer-top-area {
+    padding: 60px 0 30px 0;
+}
+
+/* Contenedor general que reemplaza a las filas de Bootstrap */
+.footer-top-area .container,
+.footer-bottom-area .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-top-area .row {
+    display: flex;
+    flex-wrap: wrap;       /* Permite que las columnas bajen en pantallas chicas */
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Cada columna del footer (reemplaza los col-lg-3) */
+.footer-top-area .row > div {
+    flex: 1;
+    min-width: 250px;      /* Ancho mínimo antes de pasar a la siguiente línea */
+}
+
+/* Estilos de los títulos */
+.footer-heading h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+/* Línea sutil decorativa debajo de los títulos */
+.footer-heading h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #00559b; /* Color de acento corporativo */
+}
+
+/* Logo e imagen principal del footer */
+.footer-heading img {
+    max-width: 160px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* Iconos de Redes Sociales */
+.footer-social-icons ul {
+    display: flex;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-social-icons ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-social-icons ul li a:hover {
+    background-color: #00559b;
+    transform: translateY(-3px);
+}
+
+/* Links Útiles (Navegación) */
+.footer-two nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-two nav ul li {
+    margin-bottom: 10px;
+}
+
+.footer-two nav ul li a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.2s ease, padding-left 0.2s ease;
+    display: inline-block;
+}
+
+.footer-two nav ul li a i {
+    margin-right: 8px;
+    font-size: 12px;
+    color: #00559b;
+}
+
+.footer-two nav ul li a:hover {
+    color: #ffffff;
+    padding-left: 5px; /* Pequeño efecto de desplazamiento al pasar el cursor */
+}
+
+/* Bloque de Contacto */
+.footer-heading p {
+    color: #bdc3c7;
+    margin-bottom: 15px;
+    font-size: 13.5px;
+}
+
+.footer-heading p i {
+    color: #00559b;
+    margin-right: 8px;
+    font-size: 15px;
+}
+
+.footer-heading p a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-heading p a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer-border-bottom {
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Área inferior del footer (Copyright / Proveedor) */
+.footer-bottom-area {
+    background-color: #11181f; /* Un tono más oscuro para la base */
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+}
+
+.footer-bottom-left p {
+    margin: 0;
+    color: #95a5a6;
+    font-size: 13px;
+}
+
+.footer-bottom-left a {
+    color: #bdc3c7;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-bottom-left a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* ==========================================================
+   DISEÑO RESPONSIVO (Móviles y Tablets)
+   ================================================---------- */
+@media (max-width: 768px) {
+    .footer-top-area .row {
+        flex-direction: column; /* Apila las columnas verticalmente en pantallas chicas */
+        gap: 40px;
+    }
+    
+    .footer-top-area .row > div {
+        width: 100%;
+        min-width: 100%;
+    }
+}
