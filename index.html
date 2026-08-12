@@ -94,10 +94,10 @@
             <div class="row">
                 <div class="info-form">
                     <h2>Buscá tu nuevo hogar</h2>
-                    <form action="propiedades.php" method="GET">
+                    <form class="formulario" action="propiedades.php" method="GET">
                         <div class="form-fields">                       
                             <!-- Operación -->
-                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <!-- <div class=""> -->
                                 <div class="single-field">
                                     <div class="input-box">
                                         <select name="ope">
@@ -108,7 +108,7 @@
                                         </select>
                                     </div>
                                 </div>
-                            </div>                       
+                            <!-- </div>                        -->
                             <!-- Tipo -->
                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                 <div class="single-field">
@@ -382,91 +382,105 @@
 <!-- Feature Property Area End Here --> 
 
 <!-- Subscribe Area Start Here -->
-        <div class="subscribe-area">
+    <div class="subscribe-area">
+        <div class="container">
+            <div class="subscribe-content">
+                <div class="subscribe-text">
+                    <h3>SUBSCRIBE NEWSLETTER</h3>
+                    <p>Recibí las mejores oportunidades inmobiliarias antes que nadie.</p>
+                </div>
+                <div class="newsletter">
+                    <form class="newsletter-form">
+                        <div class="input-wrapper">
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            <input placeholder="Ingrese su email !"/>
+                        </div>                                
+                            <button type="submit" class="btn-subscribe">Suscribirme</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Subscribe Area End Here -->
+<!-- Footer top area start -->
+    <footer>
+        <div id="footer" class="footer-top-area">
             <div class="container">
-                <div class="subscribe-content">
-                    <div class="subscribe-text">
-                        <h3>SUBSCRIBE NEWSLETTER</h3>
-                        <p>Recibí las mejores oportunidades inmobiliarias antes que nadie.</p>
+                <div class="row-footer">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-heading">
+                            <a href="index.html"><img src="img/logo_empresa.png" alt=""></a>
+                            <!-- <p>Praesent vel rutrum purus. Nam vel dui eu risus duis dignissim dignissim.</p> -->
+                            <div class="footer-social-icons">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="newsletter">
-                        <form class="newsletter-form">
-                            <div class="input-wrapper">
-                                <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                                <input placeholder="Ingrese su email !"/>
-                            </div>                                
-                                <button type="submit" class="btn-subscribe">Suscribirme</button>
-                        </form>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="footer-heading">
+                            <h2>Links Utiles</h2>
+                            <div class="footer-two">
+                                <nav>
+                                    <ul>
+                                    <li><a href="propiedades.php?p=0"><i class="fa fa-angle-right" aria-hidden="true"></i>Propiedades</a></li>
+                                    <li><a href="contacto.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Contacto</a></li>
+                                    <li><a href="tasaciones.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Tasaciones</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="footer-heading heading-margin">
+                        <h2>Propiedades recientes</h2>
+                        <div class="sweet-home">
+                            <p class="futuros-links">Acá va a ir una consulta a la BDD para que muestre los Id mas recientes</p>
+                        </div>                                  
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="footer-heading">
+                        <h2>Contacto</h2>
+                        <p class="footer-border-bottom">
+                            <i class="fa fa-home" aria-hidden="true"></i> Estado de Israel 2809<br> Posadas, Misiones, Argentina 
+                        </p>
+                        <div class="celu">
+                            <p class="phone">
+                                (0376) 44 22 483
+                            </p>
+                            <p class="phone">
+                                (0376) 44 30 241
+                            </p>
+                        </div>
+                        <p>
+                            <i class="fa fa-envelope" aria-hidden="true"></i> 
+                            <a href="/cdn-cgi/l/email-protection#b9d0d7dfd6f9cad6cad8d0d7d4d6dbd0d5d0d8cbd0d897dad6d4"> 
+                                <span class="__cf_email__" data-cfemail="365f58505976455945575f585b59545f5a5f57445f571855595b">[email&#160;protected]
+                                </span>
+                            </a>
+                        </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-<!-- Subscribe Area End Here -->
-<!-- Footer top area start -->
-        <footer>
-            <div id="footer" class="footer-top-area">
-                <div class="container">
-                    <div class="row">
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <div class="footer-heading">
-                    <a href="index.html"><img src="img/logo_empresa.png" alt=""></a>
-                    <!-- <p>Praesent vel rutrum purus. Nam vel dui eu risus duis dignissim dignissim.</p> -->
-                    <div class="footer-social-icons">
-                      <ul>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                  <div class="footer-heading">
-                    <h2>Links Utiles</h2>
-                    <div class="footer-two">
-                      <nav>
-                        <ul>
-                          <li><a href="propiedades.php?p=0"><i class="fa fa-angle-right" aria-hidden="true"></i>Propiedades</a></li>
-                          <li><a href="contacto.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Contacto</a></li>
-                          <li><a href="tasaciones.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Tasaciones</a></li>
-                        </ul>
-                      </nav>
-                    </div>
-                  </div>
-                </div>
-               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                  <div class="footer-heading heading-margin">
-                    <h2>Propiedades recientes</h2>
-                    <div class="sweet-home">
-                        <p class="futuros-links">Acá va a ir una consulta a la BDD para que muestre los Id mas recientes</p>
-                    </div>                                  
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                  <div class="footer-heading">
-                    <h2>Contacto</h2>
-                    <p class="footer-border-bottom"><i class="fa fa-home" aria-hidden="true"></i> Estado de Israel 2809<br> Posadas, Misiones, Argentina </p>
-                    <p><i class="fa fa-phone" aria-hidden="true"></i> (0376) 44 22 483<br> (0376) 44 30 241</p>
-                    <p><i class="fa fa-envelope" aria-hidden="true"></i> <a href="/cdn-cgi/l/email-protection#b9d0d7dfd6f9cad6cad8d0d7d4d6dbd0d5d0d8cbd0d897dad6d4"> <span class="__cf_email__" data-cfemail="365f58505976455945575f585b59545f5a5f57445f571855595b">[email&#160;protected]</span></a></p>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="footer-bottom-area">
+        <div class="footer-bottom-area">
             <div class="container">
-              <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                  <div class="footer-bottom-left">                  
-                    <p>Provisto por <a href="http://xintel.com.ar" rel="nofollow" target="_blank">Xintel</a>. Perteneciente a <a href="http://amaira.com.ar" rel="nofollow" target="_blank">Amaira</a>.</p>
-                  </div>
+                <div class="row-footer">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="footer-bottom-left">                  
+                            <p>Provisto por <a href="http://xintel.com.ar" rel="nofollow" target="_blank">Xintel</a>. Perteneciente a <a href="http://amaira.com.ar" rel="nofollow" target="_blank">Amaira</a>.</p>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-        </footer>
+        </div>
+    </footer>
         <!-- Footer End Here --> 
 		<!-- all js here -->
             <script src="script.js"></script>

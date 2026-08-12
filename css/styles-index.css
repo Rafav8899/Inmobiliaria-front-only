@@ -372,20 +372,39 @@ body{
    SECCIÓN DE FILTROS / BUSCADOR
    ========================================== */
 .find-your-home-area {
-  position: relative;
-  background-color: var(--bg-color);
-  padding: 40px 0 20px;
+  /* position: relative; */
+  justify-content: center;
+  /* background-color: var(--bg-color); */
+  background-color: green;
+  /* padding: 40px 0 20px; */
+  padding: 2rem;
   margin-top: -50px; /* Eleva ligeramente el buscador para solaparlo con el slider */
   z-index: 10;
+  display: flex;
+  width: 100%;
+}
+.find-your-home-area .container,
+.find-your-home-area .row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .info-form {
-  background: var(--bg-color);
+  background-color: red;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background: var(--bg-color); */
   padding: 30px;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-dropdown);
   border: 1px solid rgba(0, 0, 0, 0.05);
   width: 100%;
+  max-width: 1140px; /* Limita el ancho máximo para que no se expanda de más */
+  margin: 0 auto;
 }
 
 .info-form h2 {
@@ -395,18 +414,30 @@ body{
   color: var(--text-dark);
   margin-bottom: 25px;
   text-align: center;
+  width: 100%;
 }
 
 .form-fields {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px 0;
-  align-items: center;
+  gap: 15px 15px;
+  background-color: blue;
+}
+
+.info-form form {
+  width: 100%;
+  /* justify-content: center; */
+}
+
+.formulario{
+  justify-content: center;
 }
 
 /* Campos individuales y selects */
 .single-field {
   margin-bottom: 15px;
+  padding: 1rem;
+  background-color: yellow;
 }
 
 .single-field p {
@@ -439,13 +470,21 @@ body{
 }
 
 .price-filter-wrapper {
-    width: 50%;          /* Equivalente al col-lg-6 (ocupa la mitad de la fila) */
-    padding: 0 15px;     /* Espaciado interno de seguridad estilo gutters */
-    box-sizing: border-box;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 15px 0;          /* Equivalente al col-lg-6 (ocupa la mitad de la fila) */
+    /* padding: 0 15px;     Espaciado interno de seguridad estilo gutters */
+    /* box-sizing: border-box; */
+    /* margin-bottom: 20px; */
 }
 /* Estilo general del contenedor del campo */
 .price-field-container {
+  /* display: flex; */
+  /* flex-direction: column; */
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
     background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
@@ -1030,7 +1069,7 @@ footer {
     padding: 0 20px;
 }
 
-.footer-top-area .row {
+.footer-top-area .row-footer {
     display: flex;
     flex-wrap: wrap;       /* Permite que las columnas bajen en pantallas chicas */
     justify-content: space-between;
@@ -1038,7 +1077,7 @@ footer {
 }
 
 /* Cada columna del footer (reemplaza los col-lg-3) */
-.footer-top-area .row > div {
+.footer-top-area .row-footer > div {
     flex: 1;
     min-width: 250px;      /* Ancho mínimo antes de pasar a la siguiente línea */
 }
@@ -1130,13 +1169,17 @@ footer {
 /* Bloque de Contacto */
 .footer-heading p {
     color: #bdc3c7;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     font-size: 13.5px;
 }
 
-.footer-heading p i {
-    color: #00559b;
-    margin-right: 8px;
+/* .footer-heading{
+  background-color: red;
+} */
+
+.footer-heading p {
+    /* color: #00559b; */
+    /* margin-right: 8px; */
     font-size: 15px;
 }
 
@@ -1154,6 +1197,11 @@ footer {
 .footer-border-bottom {
     padding-bottom: 12px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.celu{
+  color: #95a5a6;
+  /* background-color: green; */
+  padding-bottom:2rem ;
 }
 
 /* Área inferior del footer (Copyright / Proveedor) */
@@ -1185,12 +1233,12 @@ footer {
    DISEÑO RESPONSIVO (Móviles y Tablets)
    ================================================---------- */
 @media (max-width: 768px) {
-    .footer-top-area .row {
+    .footer-top-area .row-footer {
         flex-direction: column; /* Apila las columnas verticalmente en pantallas chicas */
         gap: 40px;
     }
     
-    .footer-top-area .row > div {
+    .footer-top-area .row-footer > div {
         width: 100%;
         min-width: 100%;
     }
