@@ -438,6 +438,86 @@ body{
   box-shadow: 0 0 0 3px rgba(0, 85, 155, 0.15);
 }
 
+.price-filter-wrapper {
+    width: 50%;          /* Equivalente al col-lg-6 (ocupa la mitad de la fila) */
+    padding: 0 15px;     /* Espaciado interno de seguridad estilo gutters */
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+/* Estilo general del contenedor del campo */
+.price-field-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+.price-field-container p {
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+/* 1. La barra base del slider que genera jQuery UI */
+#slider-range.ui-slider {
+    position: relative;
+    text-align: left;
+    height: 8px;              /* Grosor de la barra */
+    background-color: #e0e0e0; /* Color de fondo de la barra inactiva */
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+/* 2. El sector coloreado entre las dos perillas */
+#slider-range .ui-slider-range {
+    position: absolute;
+    z-index: 1;
+    font-size: .7em;
+    display: block;
+    border: 0;
+    background-position: 0 0;
+    background-color: #00559b; /* Color corporativo de la barra seleccionada */
+    height: 100%;
+    border-radius: 4px;
+}
+
+/* 3. Las perillas (manijas) para arrastrar */
+#slider-range .ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    width: 20px;               /* Ancho de la perilla */
+    height: 20px;              /* Alto de la perilla */
+    border-radius: 50%;        /* Las hace circulares */
+    background-color: #ffffff; /* Color interno de la perilla */
+    border: 2px solid #00559b; /* Borde de color */
+    cursor: pointer;
+    outline: none;
+    top: -6px;                 /* Ajuste vertical para centrarla en la barra */
+    margin-left: -10px;        /* Centrado horizontal exacto */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.1s ease;
+}
+
+/* Efecto al pasar el cursor o hacer clic en la perilla */
+#slider-range .ui-slider-handle:hover,
+#slider-range .ui-slider-handle:focus {
+    transform: scale(1.1);
+}
+
+/* Área de los inputs de texto y ocultos */
+.price-area {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#amount {
+    border: none;
+    background: transparent;
+    font-weight: bold;
+    color: #00559b;
+    font-size: 14px;
+    width: 100%;
+}
 /* Slider de Rango de precios */
 #slider-range {
   margin-bottom: 10px;
@@ -516,7 +596,7 @@ body{
    ========================================== */
 
 .propiedad-row{
-  /* background-color: green; */
+  /* background-color: green;  */
   display: flex;
   flex-direction: column;
   gap:1.5rem;
@@ -537,7 +617,9 @@ body{
   /* background-color: red; */
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .property-menu a{

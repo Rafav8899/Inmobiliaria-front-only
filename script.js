@@ -48,3 +48,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
     startTimer();
 });
+
+
+//===================================
+// RANGO DE PRECIOS
+//===================================
+
+$(document).ready(function() {
+    $( "#slider-range" ).slider({
+        range: true,
+        min: 10000,
+        max: 1000000,
+        step: 5000,
+        values: [ 100000, 400000 ],
+        slide: function( event, ui ) {
+            $( "#amount" ).val( "$" + ui.values[ 0 ].toLocaleString() + " - $" + ui.values[ 1 ].toLocaleString() );
+            $( "#desde" ).val( ui.values[ 0 ] );
+            $( "#hasta" ).val( ui.values[ 1 ] );
+        }
+    });
+
+    // Seteo inicial visual
+    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ).toLocaleString() +
+        " - $" + $( "#slider-range" ).slider( "values", 1 ).toLocaleString() );
+});

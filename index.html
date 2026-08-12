@@ -17,6 +17,12 @@
     
     <!-- Modernizr -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
 </head>
 
 <body>
@@ -200,8 +206,8 @@
                             </div>
                             
                             <!-- Rango de precios -->
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <div class="single-field price-field-container">                                   
+                            <div class="price-filter-wrapper">
+                                <div class="price-field-container">                                   
                                     <p>Rango de precios</p>
                                     <div id="slider-range"></div>
                                     <div class="price-area">
@@ -221,13 +227,6 @@
                         </div>
                         <input type="hidden" name="p" value="0">
                     </form>
-                </div>
-                <!-- Decoración de sombra inferior -->
-                <div class="shadow text-center">
-                    <img src="images/shadow.png" alt="shadow">
-                    <a href="#bajar">
-                        <i class="fa fa-angle-down"></i>
-                    </a>
                 </div>
             </div>
         </div>
