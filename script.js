@@ -72,3 +72,28 @@ $(document).ready(function() {
     $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ).toLocaleString() +
         " - $" + $( "#slider-range" ).slider( "values", 1 ).toLocaleString() );
 });
+
+
+  /*-------------------------------
+  Counter Up
+  ---------------------------------*/
+    $('.about-counter').counterUp({
+      delay: 50,
+      time: 3000
+    });
+    //Property details one slider
+    $('.big-photo').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      asNavFor: '.pagin-slider'
+    });
+    $('.pagin-slider').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      asNavFor: '.big-photo',
+      dots: false,
+      centerMode: true,
+      focusOnSelect: true
+    });
