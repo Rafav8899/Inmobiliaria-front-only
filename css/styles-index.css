@@ -51,7 +51,11 @@
    ========================================== */
 body{
     background-color: var(--bg-color);
-}
+    /* background-color: blue; */
+    width: 100%;
+    padding: 0.1px;
+    /* box-sizing: border-box; */
+} 
 
 /* Contenedor general del Header */
 .main-header{
@@ -59,7 +63,8 @@ body{
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background-color: var(--bg-color);
+  /* background-color: var(--bg-color); */
+  /* background-color: red; */
   box-shadow: var(--shadow-header);
   width: 100%;
   box-sizing: border-box;
@@ -372,16 +377,15 @@ body{
    SECCIÓN DE FILTROS / BUSCADOR
    ========================================== */
 .find-your-home-area {
-  /* position: relative; */
+  position: relative;
   justify-content: center;
-  /* background-color: var(--bg-color); */
-  background-color: green;
-  /* padding: 40px 0 20px; */
-  padding: 2rem;
+  background-color: var(--bg-color);
+  padding: 40px 0 20px;
   margin-top: -50px; /* Eleva ligeramente el buscador para solaparlo con el slider */
   z-index: 10;
   display: flex;
   width: 100%;
+  box-sizing: border-box;
 }
 .find-your-home-area .container,
 .find-your-home-area .row {
@@ -392,12 +396,11 @@ body{
 }
 
 .info-form {
-  background-color: red;
   justify-content: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* background: var(--bg-color); */
+  background: var(--bg-color);
   padding: 30px;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-dropdown);
@@ -420,8 +423,10 @@ body{
 .form-fields {
   display: flex;
   flex-wrap: wrap;
+  /* flex-direction: row; */
   gap: 15px 15px;
-  background-color: blue;
+  /* background-color: blue; */
+  justify-content: center;
 }
 
 .info-form form {
@@ -435,9 +440,8 @@ body{
 
 /* Campos individuales y selects */
 .single-field {
-  margin-bottom: 15px;
-  padding: 1rem;
-  background-color: yellow;
+  margin-bottom: 10px;
+  /* background-color: yellow; */
 }
 
 .single-field p {
@@ -447,6 +451,12 @@ body{
   margin-bottom: 8px;
   font-weight: 600;
 }
+
+.input-box{
+  /* background-color: violet; */
+  padding: 1rem;
+}
+
 
 .input-box select,
 .price-area input[type="text"] {
@@ -698,7 +708,7 @@ body{
 /* Tarjeta principal con diseño moderno */
 .card-container {
     background-color: var(--bg-cards);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    /* border: 1px solid rgba(0, 0, 0, 0.05); */
     border-radius: var(--border-radius);
     color: var(--text-color);
     overflow: hidden;

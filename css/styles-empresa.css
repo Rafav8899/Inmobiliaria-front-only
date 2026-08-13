@@ -303,28 +303,158 @@ body{
 /* ==========================================
    ESTILOS: ABOUT AREA / QUIENES SOMOS (Sosa Inmobiliaria)
    ================================---------- */
-
-.about-area {
-    padding: 80px 0;
+.about-section {
     background-color: var(--bg-color);
-    font-family: var(--font-base);
     color: var(--sub-text-color);
+    font-family: var(--font-base);
+    padding: calc(var(--spacing-base) * 2) 20px;
 }
 
-.container-about {
+.about-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
 }
 
-.row-about {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+/* Contenido de Texto */
+.about-content h2 {
+    font-family: var(--font-heading);
+    color: var(--text-dark);
+    font-size: 2.2rem;
+    margin-bottom: 20px;
 }
+
+.about-content h2 span {
+    color: var(--hover-color);
+}
+
+.about-content p {
+    margin-bottom: 16px;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.about-content ul {
+    list-style: disc;
+    margin: 15px 0 20px 20px;
+}
+
+.about-content ul li {
+    margin-bottom: 6px;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.about-quote {
+    font-style: italic;
+    color: var(--text-dark);
+    border-left: 4px solid var(--hover-color);
+    background-color: rgba(53, 78, 220, 0.055);
+    padding-left: 15px;
+    margin: 20px 0;
+}
+
+/* Botón */
+.about-action {
+    margin-top: 25px;
+}
+
+.btn-contact {
+    display: inline-block;
+    /* background-color: var(--hover-color); */
+    color: var(--text-dark);
+    padding: 12px 30px;
+    border-radius: var(--border-radius);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.btn-contact:hover {
+    background-color: var(--hover-color);
+    color: var(--bg-color);
+}
+
+/* Carrusel Puro CSS Lateral */
+.about-carousel {
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-dropdown);
+    position: relative;
+    background-color: var(--bg-cards);
+    height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: scrollCarousel 25s linear infinite;
+}
+
+.carousel-track:hover {
+    animation-play-state: paused; /* Se pausa al pasar el mouse por encima */
+}
+
+.carousel-track img {
+    width: 400px;
+    height: 460px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    flex-shrink: 0;
+}
+
+@keyframes scrollCarousel {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-50% - 10px));
+    }
+}
+
+
+
+
+
+/* .about-area { */
+    /* padding: 80px 0; */
+    /* padding: 0 5rem ; */
+    /* background-color: red; */
+    /* background-color: var(--bg-color); */
+    /* font-family: var(--font-base); */
+    /* color: var(--sub-text-color); */
+/* } */
+
+/* .container-about { */
+    /* background-color: green; */
+    /* max-width: 1200px; */
+    /* margin: 0 auto; */
+    /* padding: 0 15px; */
+    /* padding: 0 5rem; */
+/* } */
+
+/* .row-about { */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* gap: 40px; */
+    /* padding-bottom: 2rem; */
+    /* background-color: yellow; */
+/* } */
+
+/* .about-us{
+    display: flex;
+} */
 
 /* Títulos principales */
-.about-use-area-content h2 {
+/* .about-use-area-content h2 {
     font-family: var(--font-heading);
     font-size: 36px;
     font-weight: 700;
@@ -332,74 +462,74 @@ body{
     text-transform: uppercase;
     margin-bottom: 25px;
     letter-spacing: 0.5px;
-}
-
+} */
+/* 
 .about-use-area-content h2 span {
     color: var(--hover-color);
-}
+} */
 
 /* Párrafos y tipografía general */
-.about-use-area-content p {
+/* .about-use-area-content p {
     font-size: 16px;
     line-height: 1.7;
     margin-bottom: 20px;
     color: var(--sub-text-color);
-}
+} */
 
 /* Listado estilizado de las áreas */
-.about-use-area-content ul {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 12px;
-}
+/* .about-use-area-content ul { */
+    /* list-style: none; */
+    /* padding: 0; */
+    /* margin: 20px 0; */
+    /* display: grid; */
+    /* grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); */
+    /* gap: 12px; */
+/* } */
 
-.about-use-area-content ul li {
-    background-color: var(--bg-cards);
-    padding: 12px 18px;
-    border-radius: var(--border-radius);
-    font-family: var(--font-heading);
-    font-weight: 600;
-    font-size: 15px;
-    color: var(--text-dark);
-    box-shadow: var(--shadow-header);
-    transition: var(--transition);
-}
+/* .about-use-area-content ul li { */
+    /* background-color: var(--bg-cards); */
+    /* padding: 12px 18px; */
+    /* border-radius: var(--border-radius); */
+    /* font-family: var(--font-heading); */
+    /* font-weight: 600; */
+    /* font-size: 15px; */
+    /* color: var(--text-dark); */
+    /* box-shadow: var(--shadow-header); */
+    /* transition: var(--transition); */
+/* } */
 
-.about-use-area-content ul li:hover {
+/* .about-use-area-content ul li:hover {
     transform: translateY(-3px);
     background-color: rgba(0, 85, 155, 0.08);
     color: var(--hover-color);
-}
+} */
 
 /* Grilla de Imágenes (Photo Collage elegante) */
-.about-feature-container {
+/* .about-feature-container {
     margin: 30px 0;
-}
+} */
 
-.about-feature {
+/* .about-feature {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
-}
+} */
 
-.about-feature img {
+/* .about-feature img {
     width: 100%;
     height: 220px;
     object-fit: cover;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-dropdown);
     transition: transform var(--transition-speed) var(--transition-ease);
-}
+} */
 
-.about-feature img:hover {
+/* .about-feature img:hover {
     transform: scale(1.03);
-}
+} */
 
 /* Frase institucional destacada (Cita final) */
-.about-text-container .about-use-area-content p:nth-last-child(2) {
+/* .about-text-container .about-use-area-content p:nth-last-child(2) {
     font-family: var(--font-heading);
     font-style: italic;
     font-size: 18px;
@@ -411,14 +541,16 @@ body{
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 0 var(--border-radius) var(--border-radius) 0;
-}
+} */
 
 /* Botón de contacto */
-.read-more {
+/* .read-more {
     margin-top: 30px;
-}
+    text-align: center;
 
-.read-more .btn-danger {
+} */
+
+/* .read-more .btn-danger {
     background-color: var(--hover-color);
     color: #ffffff;
     font-family: var(--font-heading);
@@ -430,13 +562,13 @@ body{
     box-shadow: var(--shadow-header);
     transition: var(--transition);
     border: none;
-}
+} */
 
-.read-more .btn-danger:hover {
+/* .read-more .btn-danger:hover {
     background-color: var(--hover-color);
     transform: translateY(-2px);
     box-shadow: var(--shadow-dropdown);
-}
+} */
 
 /* ==========================================
    DISEÑO RESPONSIVO
