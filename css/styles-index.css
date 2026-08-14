@@ -1127,23 +1127,38 @@ footer {
     list-style: none;
     padding: 0;
     margin: 0;
+    align-items:center; 
 }
 
 .footer-social-icons ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     background-color: rgba(255, 255, 255, 0.08);
     color: #ffffff;
     border-radius: 50%;
     text-decoration: none;
+    position: relative;
     transition: background-color 0.2s ease, transform 0.2s ease;
+    overflow: hidden;
+}
+.footer-social-icons ul li a img{
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+}
+
+/* Estilo para los demás que usan fuentes */
+.footer-social-icons ul li a i {
+    font-size: 16px;
 }
 
 .footer-social-icons ul li a:hover {
-    background-color: #00559b;
+    background-color: var(--hover-color);
     transform: translateY(-3px);
 }
 
