@@ -1,24 +1,25 @@
 <!-- estructura card -->
+
 <div class="card-container">
     <div class="card-header">
         <div class="images">
-            <a href=""> <!-- show de cada propiedad -->
+            <a href="">                             <!-- show de cada propiedad -->
                 <div class="img-overlay"></div>
-                <img src="" alt=""> <!-- imagen de cada propiedad -->
+                <img src="" alt="">                 <!-- imagen de cada propiedad -->
                 <div class="icons-area">
                     <span class="plus-icon">+</span>
                 </div>
             </a>
-            <span></span> <!-- el tipo de operación -->
+            <span></span>                           <!-- el tipo de operación -->
         </div>
     </div>
     <div class="card-body">
         <h3>
             <!-- show-->
-            <a href=""></a><!-- nombre cada propiedad -->
+            <a href=""></a>                         <!-- nombre cada propiedad -->
         </h3>
-        <div class="card-location"></div> <!-- ubicación -->
-    <p class="card-price">$ </p> <!-- precio -->
+        <div class="card-location"></div>           <!-- ubicación -->
+    <p class="card-price">$ </p>                    <!-- precio -->
     </div>
 </div>
 

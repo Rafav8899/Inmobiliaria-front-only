@@ -422,174 +422,6 @@ body{
 
 
 
-
-
-/* .about-area { */
-    /* padding: 80px 0; */
-    /* padding: 0 5rem ; */
-    /* background-color: red; */
-    /* background-color: var(--bg-color); */
-    /* font-family: var(--font-base); */
-    /* color: var(--sub-text-color); */
-/* } */
-
-/* .container-about { */
-    /* background-color: green; */
-    /* max-width: 1200px; */
-    /* margin: 0 auto; */
-    /* padding: 0 15px; */
-    /* padding: 0 5rem; */
-/* } */
-
-/* .row-about { */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* gap: 40px; */
-    /* padding-bottom: 2rem; */
-    /* background-color: yellow; */
-/* } */
-
-/* .about-us{
-    display: flex;
-} */
-
-/* Títulos principales */
-/* .about-use-area-content h2 {
-    font-family: var(--font-heading);
-    font-size: 36px;
-    font-weight: 700;
-    color: var(--text-dark);
-    text-transform: uppercase;
-    margin-bottom: 25px;
-    letter-spacing: 0.5px;
-} */
-/* 
-.about-use-area-content h2 span {
-    color: var(--hover-color);
-} */
-
-/* Párrafos y tipografía general */
-/* .about-use-area-content p {
-    font-size: 16px;
-    line-height: 1.7;
-    margin-bottom: 20px;
-    color: var(--sub-text-color);
-} */
-
-/* Listado estilizado de las áreas */
-/* .about-use-area-content ul { */
-    /* list-style: none; */
-    /* padding: 0; */
-    /* margin: 20px 0; */
-    /* display: grid; */
-    /* grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); */
-    /* gap: 12px; */
-/* } */
-
-/* .about-use-area-content ul li { */
-    /* background-color: var(--bg-cards); */
-    /* padding: 12px 18px; */
-    /* border-radius: var(--border-radius); */
-    /* font-family: var(--font-heading); */
-    /* font-weight: 600; */
-    /* font-size: 15px; */
-    /* color: var(--text-dark); */
-    /* box-shadow: var(--shadow-header); */
-    /* transition: var(--transition); */
-/* } */
-
-/* .about-use-area-content ul li:hover {
-    transform: translateY(-3px);
-    background-color: rgba(0, 85, 155, 0.08);
-    color: var(--hover-color);
-} */
-
-/* Grilla de Imágenes (Photo Collage elegante) */
-/* .about-feature-container {
-    margin: 30px 0;
-} */
-
-/* .about-feature {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-} */
-
-/* .about-feature img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-dropdown);
-    transition: transform var(--transition-speed) var(--transition-ease);
-} */
-
-/* .about-feature img:hover {
-    transform: scale(1.03);
-} */
-
-/* Frase institucional destacada (Cita final) */
-/* .about-text-container .about-use-area-content p:nth-last-child(2) {
-    font-family: var(--font-heading);
-    font-style: italic;
-    font-size: 18px;
-    color: var(--text-dark);
-    border-left: 4px solid var(--hover-color);
-    padding-left: 20px;
-    margin: 30px 0;
-    background-color: rgba(53, 78, 220, 0.055);
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 0 var(--border-radius) var(--border-radius) 0;
-} */
-
-/* Botón de contacto */
-/* .read-more {
-    margin-top: 30px;
-    text-align: center;
-
-} */
-
-/* .read-more .btn-danger {
-    background-color: var(--hover-color);
-    color: #ffffff;
-    font-family: var(--font-heading);
-    font-weight: 600;
-    padding: 14px 32px;
-    border-radius: var(--border-radius);
-    text-decoration: none;
-    display: inline-block;
-    box-shadow: var(--shadow-header);
-    transition: var(--transition);
-    border: none;
-} */
-
-/* .read-more .btn-danger:hover {
-    background-color: var(--hover-color);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-dropdown);
-} */
-
-/* ==========================================
-   DISEÑO RESPONSIVO
-   ========================================== */
-/* @media (max-width: 992px) {
-    .about-feature {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 576px) {
-    .about-feature {
-        grid-template-columns: 1fr;
-    }
-    
-    .about-use-area-content h2 {
-        font-size: 28px;
-    }
-} */
-
-
 /* ==========================================
    ESTILOS: SECCIÓN DE CONTADORES (Sosa Inmobiliaria)
    ========================================== */
@@ -644,20 +476,6 @@ body{
     line-height: 1.4;
 }
 
-/* ==========================================
-   DISEÑO RESPONSIVO
-   ========================================== */
-/* @media (max-width: 992px) { */
-    /* .counter-container { */
-        /* grid-template-columns: repeat(2, 1fr); En tablets pasan a 2 columnas */
-    /* } */
-/* } */
-
-/* @media (max-width: 576px) { */
-    /* .counter-container { */
-        /* grid-template-columns: 1fr; En celulares quedan de 1 sola columna */
-    /* } */
-/* } */
 
 
 /* ==========================================
@@ -834,23 +652,38 @@ footer {
     list-style: none;
     padding: 0;
     margin: 0;
+    align-items:center; 
 }
 
 .footer-social-icons ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     background-color: rgba(255, 255, 255, 0.08);
     color: #ffffff;
     border-radius: 50%;
     text-decoration: none;
+    position: relative;
     transition: background-color 0.2s ease, transform 0.2s ease;
+    overflow: hidden;
+}
+.footer-social-icons ul li a img{
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+}
+
+/* Estilo para los demás que usan fuentes */
+.footer-social-icons ul li a i {
+    font-size: 16px;
 }
 
 .footer-social-icons ul li a:hover {
-    background-color: #00559b;
+    background-color: var(--hover-color);
     transform: translateY(-3px);
 }
 
