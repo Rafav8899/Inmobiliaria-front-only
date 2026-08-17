@@ -239,7 +239,7 @@ body{
 
 .contact-page-area {
     padding: 4rem 1.5rem;
-    background-color: var(--bg-cards, #f9f9f9);
+    background-color: var(--bg-cards);
     font-family: var(--font-base, 'Lato', sans-serif);
 }
 
@@ -261,10 +261,10 @@ body{
 
 /* Contenedor del Mapa */
 .contact-map-wrapper {
-    border-radius: var(--border-radius, 6px);
+    border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--shadow-dropdown, 0 8px 20px rgba(0, 0, 0, 0.08));
-    background-color: #ffffff;
+    background-color: var(--bg-color);
     min-height: 380px;
 }
 
@@ -277,9 +277,9 @@ body{
 
 /* Contenedor del Formulario */
 .contact-form-wrapper {
-    background-color: #ffffff;
+    background-color: var(--bg-color);
     padding: 2.5rem;
-    border-radius: var(--border-radius, 6px);
+    border-radius: var(--border-radius);
     box-shadow: var(--shadow-dropdown, 0 8px 20px rgba(0, 0, 0, 0.08));
     display: flex;
     flex-direction: column;
@@ -313,8 +313,8 @@ body{
     padding: 0 1rem;
     font-family: var(--font-base, 'Lato', sans-serif);
     font-size: 0.95rem;
-    color: var(--text-color, #080808);
-    background-color: #fdfdfd;
+    color: var(--text-color);
+    background-color: var(--bg-color);
     border: 1px solid #dcdcdc;
     border-radius: var(--border-radius, 6px);
     outline: none;
@@ -329,14 +329,14 @@ body{
 }
 
 .form-control:focus {
-    border-color: var(--hover-color, #00559b);
+    border-color: var(--hover-color);
     box-shadow: 0 0 0 3px rgba(0, 85, 155, 0.1);
 }
 
 /* Botón de envío */
 .btn-submit {
-    background-color: var(--accent-color, #dc3545);
-    color: #ffffff;
+    background-color: var(--hover-color);
+    color: var(--bg-color);
     font-family: var(--font-heading, 'Montserrat', sans-serif);
     font-weight: 600;
     font-size: 1rem;
@@ -349,7 +349,7 @@ body{
 }
 
 .btn-submit:hover {
-    background-color: var(--accent-hover, #bb2d3b);
+    background-color: var(--hover-color);
     transform: translateY(-2px);
 }
 
@@ -361,7 +361,7 @@ body{
 }
 
 .single-contact-card {
-    background-color: #ffffff;
+    background-color: var(--bg-color);
     padding: 2rem 1.5rem;
     border-radius: var(--border-radius, 6px);
     box-shadow: var(--shadow-dropdown, 0 8px 20px rgba(0, 0, 0, 0.05));
