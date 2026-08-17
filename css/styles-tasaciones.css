@@ -234,6 +234,210 @@ body{
 
 
 /* ==========================================
+   ESTILOS: PÁGINA DE CONTACTO (Sosa Inmobiliaria)
+   ========================================== */
+
+.contact-page-area {
+    padding: 4rem 1.5rem;
+    background-color: var(--bg-cards, #f9f9f9);
+    font-family: var(--font-base, 'Lato', sans-serif);
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/* Grilla principal: Mapa y Formulario lado a lado en pantallas grandes */
+.contact-main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: stretch;
+}
+
+/* Contenedor del Mapa */
+.contact-map-wrapper {
+    border-radius: var(--border-radius, 6px);
+    overflow: hidden;
+    box-shadow: var(--shadow-dropdown, 0 8px 20px rgba(0, 0, 0, 0.08));
+    background-color: #ffffff;
+    min-height: 380px;
+}
+
+.contact-map-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+/* Contenedor del Formulario */
+.contact-form-wrapper {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: var(--border-radius, 6px);
+    box-shadow: var(--shadow-dropdown, 0 8px 20px rgba(0, 0, 0, 0.08));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    width: 100%;
+}
+
+.form-control {
+    width: 100%;
+    height: 48px;
+    padding: 0 1rem;
+    font-family: var(--font-base, 'Lato', sans-serif);
+    font-size: 0.95rem;
+    color: var(--text-color, #080808);
+    background-color: #fdfdfd;
+    border: 1px solid #dcdcdc;
+    border-radius: var(--border-radius, 6px);
+    outline: none;
+    transition: border-color var(--transition-speed, 0.3s), box-shadow var(--transition-speed, 0.3s);
+    box-sizing: border-box;
+}
+
+.form-control.textarea {
+    height: auto;
+    padding: 1rem;
+    resize: vertical;
+}
+
+.form-control:focus {
+    border-color: var(--hover-color, #00559b);
+    box-shadow: 0 0 0 3px rgba(0, 85, 155, 0.1);
+}
+
+/* Botón de envío */
+.btn-submit {
+    background-color: var(--accent-color, #dc3545);
+    color: #ffffff;
+    font-family: var(--font-heading, 'Montserrat', sans-serif);
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    border-radius: var(--border-radius, 6px);
+    height: 50px;
+    cursor: pointer;
+    transition: background-color var(--transition-speed, 0.3s), transform 0.2s ease;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background-color: var(--accent-hover, #bb2d3b);
+    transform: translateY(-2px);
+}
+
+/* Grilla Inferior: Tarjetas de Información */
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.single-contact-card {
+    background-color: #ffffff;
+    padding: 2rem 1.5rem;
+    border-radius: var(--border-radius, 6px);
+    box-shadow: var(--shadow-dropdown, 0 8px 20px rgba(0, 0, 0, 0.05));
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    transition: transform 0.3s ease;
+}
+
+.single-contact-card:hover {
+    transform: translateY(-4px);
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 85, 155, 0.08);
+    color: var(--hover-color, #00559b);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.single-contact-card h3 {
+    font-family: var(--font-heading, 'Montserrat', sans-serif);
+    font-size: 1.1rem;
+    color: var(--text-dark, #2c3e50);
+    margin: 0;
+}
+
+.single-contact-card p {
+    font-size: 0.95rem;
+    color: var(--sub-text-color, #383838);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.single-contact-card a {
+    color: var(--hover-color, #00559b);
+    text-decoration: none;
+}
+
+.single-contact-card a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================
+   DISEÑO RESPONSIVO
+   ========================================== */
+@media (max-width: 992px) {
+    .contact-main-grid {
+        grid-template-columns: 1fr; /* Pasa a 1 sola columna en tablets/celulares */
+    }
+
+    .contact-info-grid {
+        grid-template-columns: 1fr; /* Las tarjetas de info bajan a 1 columna */
+    }
+}
+
+@media (max-width: 576px) {
+    .form-row {
+        grid-template-columns: 1fr; /* Campos del form en 1 sola columna en celulares chicos */
+    }
+    
+    .contact-form-wrapper {
+        padding: 1.5rem;
+    }
+}
+
+
+/* ==========================================
   SECCIÓN DE SUSCRIPCIÓN
    ========================================== */
 /* Contenedor principal de la sección */
