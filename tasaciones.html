@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/nivo-slider.css">
         <link rel="stylesheet" href="css/jquery-ui.min.css">
-        <link rel="stylesheet" href="/css/styles-index.css">
+        <link rel="stylesheet" href="/css/styles-tasaciones.css">
         <link rel="stylesheet" href="css/responsive.css">
         
         <!-- Modernizr -->
@@ -65,7 +65,7 @@
         </div>
 <!-- Page Header Section breadcumb End Here -->
   <!-- Contact Page Start Here -->
-  <div class="contact-page-area">
+  <!-- <div class="contact-page-area">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -141,7 +141,91 @@
           </div>
       </div>
     </div>
-  </div>
+  </div> -->
+
+
+
+  <section class="contact-page-area">
+    <div class="contact-container">
+        
+        <div class="contact-main-grid">
+            
+            <div class="contact-map-wrapper">
+                <iframe src="https://maps.google.com/maps?q=Salta+1509+Posadas+Misiones&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                        frameborder="0" 
+                        allowfullscreen 
+                        loading="lazy">
+                </iframe>
+            </div>
+
+            <div class="contact-form-wrapper">
+                <form method="post" action="formulario.php" class="contact-form">
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="E-mail*" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Teléfono">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Asunto...">
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <textarea rows="6" class="form-control textarea" placeholder="Mensaje..." required></textarea>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <button class="btn-submit" type="submit">ENVIAR</button>
+                    </div>
+
+                    <input type="hidden" name="codsuc" value="SOS">
+                    <input type="hidden" name="codemp" value="SOS">
+                    
+                </form>
+            </div>
+
+        </div>
+
+        <div class="contact-info-grid">
+            
+            <div class="single-contact-card">
+                <div class="contact-icon">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                </div>
+                <h3>Número de contacto</h3>
+                <p>(0376) 44 22 483</p>
+                <p>(0376) 44 30 241</p>
+            </div>
+
+            <div class="single-contact-card">
+                <div class="contact-icon">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                </div>
+                <h3>Email</h3>
+                <p><a href="mailto:info@inmobiliariasosa.com">info@inmobiliariasosa.com</a></p>
+            </div>
+
+            <div class="single-contact-card">
+                <div class="contact-icon">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                </div>
+                <h3>Dirección</h3>
+                <p>Salta 1509 - C.P. (N3300BHG)<br>Posadas, Misiones, Argentina</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
   <!-- Contact Page End Here -->
 <!-- Subscribe Area Start Here -->
     <div class="subscribe-area">
