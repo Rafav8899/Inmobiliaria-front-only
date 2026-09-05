@@ -1,8 +1,0 @@
-<!-- estructura card -->
-
-<div class="card-container">
-    <div class="card-header">
-        <div class="images">
-            <a href="">                             <!-- show de cada propiedad -->
-                <div class="img-overlay"></div>
-            
