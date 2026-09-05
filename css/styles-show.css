@@ -48,7 +48,7 @@ body{
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background-color: var(--bg-color);
+  /* background-color: var(--bg-color); */
   /* background-color: red; */
   box-shadow: var(--shadow-header);
   width: 100%;
