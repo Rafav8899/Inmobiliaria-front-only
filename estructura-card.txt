@@ -5,24 +5,4 @@
         <div class="images">
             <a href="">                             <!-- show de cada propiedad -->
                 <div class="img-overlay"></div>
-                <img src="" alt="">                 <!-- imagen de cada propiedad -->
-                <div class="icons-area">
-                    <span class="plus-icon">+</span>
-                </div>
-            </a>
-            <span></span>                           <!-- el tipo de operación -->
-        </div>
-    </div>
-    <div class="card-body">
-        <h3>
-            <!-- show-->
-            <a href=""></a>                         <!-- nombre cada propiedad -->
-        </h3>
-        <div class="card-location"></div>           <!-- ubicación -->
-    <p class="card-price">$ </p>                    <!-- precio -->
-    </div>
-</div>
-
-
-
-<img src="https://cdn-images.xintelweb.com/upload/sos5133_2.jpg?106668">
+            
