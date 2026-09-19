@@ -131,8 +131,6 @@ jQuery(function () {
 });
 
 
-
-
   /*--------------------------
   bxslider
   ---------------------------- */ 
@@ -273,3 +271,127 @@ jQuery(function () {
 
 
 })(jQuery); 
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    // 1. Mapeo de Localidades y Barrios
+    const barriosPorLocalidad = {
+        "posadas": ["Centro", "Villa Sarita", "Villa Blosset", "Palomar", "Aero Club", "Bahía El Brete"],
+        "garupa": ["Garupá", "Santa Inés"],
+        "candelaria": ["La Candelaria"]
+    };
+
+    const selectLoc = document.querySelector('select[name="loc"]');
+    const selectBarrio = document.querySelector('select[name="b"]');
+
+    if (selectLoc && selectBarrio) {
+        selectLoc.addEventListener('change', function() {
+            const locSeleccionada = this.value.toLowerCase();
+            
+            // Limpiar opciones de barrio dejando solo la opción por defecto
+            selectBarrio.innerHTML = '<option value="All">Barrio</option>';
+
+            if (barriosPorLocalidad[locSeleccionada]) {
+                barriosPorLocalidad[locSeleccionada].forEach(barrio => {
+                    const option = document.createElement('option');
+                    option.value = barrio.toUpperCase();
+                    option.textContent = barrio;
+                    selectBarrio.appendChild(option);
+                });
+                selectBarrio.disabled = false;
+            } else {
+                // Si elige "All" u otra opción sin mapeo
+                selectBarrio.disabled = (locSeleccionada === "all");
+            }
+        });
+    }
+});
+
+$(document).ready(function() {
+
+    // --- A. INICIALIZACIÓN DEL SLIDER DE PRECIOS ---
+    var minPrecio = 0;
+    var maxPrecio = 1000000;
+
+    $("#slider-range").slider({
+        range: true,
+        min: minPrecio,
+        max: maxPrecio,
+        step: 10000,
+        values: [100000, 500000],
+        slide: function(event, ui) {
+            // Actualiza visualmente el texto
+            $("#amount").val("$" + ui.values[0].toLocaleString() + " - $" + ui.values[1].toLocaleString());
+            $("#desde").val(ui.values[0]);
+            $("#hasta").val(ui.values[1]);
+        },
+        change: function(event, ui) {
+            // Aplica el filtro dinámico al soltar el slider
+            filtrarPropiedadesFront();
+        }
+    });
+
+    // Setea texto inicial
+    $("#amount").val("$" + $("#slider-range").slider("values", 0).toLocaleString() +
+        " - $" + $("#slider-range").slider("values", 1).toLocaleString());
+
+
+    // --- B. EVENTOS DE CAMBIO EN LOS SELECTS ---
+    $('select[name="ope"], select[name="tipo"], select[name="a1"], select[name="loc"]').on('change', function() {
+        filtrarPropiedadesFront();
+    });
+
+
+    // --- C. FUNCIÓN PRINCIPAL DE FILTRADO EN TIEMPO REAL ---
+    function filtrarPropiedadesFront() {
+        var opeSelected = $('select[name="ope"]').val();
+        var tipoSelected = $('select[name="tipo"]').val();
+        var ambSelected = $('select[name="a1"]').val();
+        var locSelected = $('select[name="loc"]').val();
+        
+        var precioMin = parseInt($("#desde").val()) || minPrecio;
+        var precioMax = parseInt($("#hasta").val()) || maxPrecio;
+
+        var visibles = 0;
+
+        $('.item-propiedad').each(function() {
+            var $item = $(this);
+            
+            var itemOpe = $item.data('operacion');
+            var itemTipo = $item.data('tipo');
+            var itemAmb = $item.data('ambientes');
+            var itemLoc = $item.data('localidad');
+            var itemPrecio = parseInt($item.data('precio'));
+
+            // Validaciones
+            var matchOpe = (opeSelected === 'All' || opeSelected == itemOpe);
+            var matchTipo = (tipoSelected === 'All' || tipoSelected == itemTipo);
+            var matchAmb = (ambSelected === 'All' || ambSelected == itemAmb);
+            var matchLoc = (locSelected === 'All' || locSelected == itemLoc);
+            var matchPrecio = (itemPrecio >= precioMin && itemPrecio <= precioMax);
+
+            // Mostrar u ocultar con transición suave
+            if (matchOpe && matchTipo && matchAmb && matchLoc && matchPrecio) {
+                $item.stop().fadeIn(300);
+                visibles++;
+            } else {
+                $item.stop().fadeOut(200);
+            }
+        });
+
+        // Mensaje de feedback visual si no hay resultados
+        if (visibles === 0) {
+            if ($('#no-results-msg').length === 0) {
+                $('.propiedad-row').after('<p id="no-results-msg" class="text-center mt-4">No se encontraron propiedades con esos filtros.</p>');
+            }
+        } else {
+            $('#no-results-msg').remove();
+        }
+    }
+
+    // --- D. PREVENIR ENVÍO DE FORMULARIO (SOLO DEMO) ---
+    $('.info-form form').on('submit', function(e) {
+        e.preventDefault(); // Evita recargar la página para mantener la presentación fluida
+        filtrarPropiedadesFront();
+    });
+});
