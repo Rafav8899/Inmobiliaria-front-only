@@ -364,10 +364,10 @@ $(document).ready(function() {
             var itemPrecio = parseInt($item.data('precio'));
 
             // Validaciones
-            var matchOpe = (opeSelected === 'All' || opeSelected == itemOpe);
-            var matchTipo = (tipoSelected === 'All' || tipoSelected == itemTipo);
-            var matchAmb = (ambSelected === 'All' || ambSelected == itemAmb);
-            var matchLoc = (locSelected === 'All' || locSelected == itemLoc);
+            var matchOpe  = (opeSelected  === 'All'   || opeSelected  == itemOpe);
+            var matchTipo = (tipoSelected === 'All'   || tipoSelected == itemTipo);
+            var matchAmb  = (ambSelected  === 'All'   || ambSelected  == itemAmb);
+            var matchLoc  = (locSelected  === 'All'   || locSelected  == itemLoc);
             var matchPrecio = (itemPrecio >= precioMin && itemPrecio <= precioMax);
 
             // Mostrar u ocultar con transición suave
