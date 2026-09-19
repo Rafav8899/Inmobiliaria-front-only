@@ -344,10 +344,10 @@ $(document).ready(function() {
 
     // --- C. FUNCIÓN PRINCIPAL DE FILTRADO EN TIEMPO REAL ---
     function filtrarPropiedadesFront() {
-        var opeSelected = $('select[name="ope"]').val();
-        var tipoSelected = $('select[name="tipo"]').val();
-        var ambSelected = $('select[name="a1"]').val();
-        var locSelected = $('select[name="loc"]').val();
+        var opeSelected   = $('select[name="ope"]').val();
+        var tipoSelected  = $('select[name="tipo"]').val();
+        var ambSelected   = $('select[name="a1"]').val();
+        var locSelected   = $('select[name="loc"]').val();
         
         var precioMin = parseInt($("#desde").val()) || minPrecio;
         var precioMax = parseInt($("#hasta").val()) || maxPrecio;
